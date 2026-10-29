@@ -20,6 +20,9 @@
 3. Запасной путь `via: "input"` как на Linux; `--no-fallback`.
 4. Захват окна: Windows.Graphics.Capture (или `PrintWindow`) → `screenshot`
    и `tree --source vision` (крейт `hangui-vision` из 07 без изменений).
+   Сравнить `ocrs` с `Windows.Media.Ocr` на тех же окнах (доля подписей,
+   время): не хуже — на Windows OCR ОС, модели не скачиваются
+   (architecture.md «Поставка»).
 5. Зонд Qt на Windows: `hangui launch` создаёт процесс приостановленным,
    загружает `hangui_qt5_probe.dll` (`LoadLibraryW` через удалённый поток),
    продолжает; протокол §9 по named pipe. Проверить на Qt-приложении без

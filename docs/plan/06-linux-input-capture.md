@@ -23,6 +23,9 @@
    `persist_mode` + `restore_token` в `$XDG_STATE_HOME/hangui/`; кадр
    монитора из PipeWire; координаты указателя — в координатах того же
    потока. Нет портала → `unsupported` с советом (Cinnamon → X11).
+   libpipewire не линковать — `dlopen` при первом ScreenCast (D18); нет
+   библиотеки → `unsupported` с `fix`, остальной hangui работает. `ldd`
+   release-бинаря — только glibc (результат в PROGRESS).
 4. Ввод: X11-сеанс — XTest; Wayland-сеанс — портал (XTest в XWayland тоже
    уходит в портал — проверено в 00). Клавиши по evdev-коду; `type` через
    keysym раскладки, недоступные символы — ошибка с перечнем.

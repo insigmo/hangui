@@ -94,9 +94,49 @@ crates/hangui-probe     клиент протокола зондов, выбор
 crates/hangui-cdp       провайдер Chromium/Electron через CDP
 crates/hangui-vision    OCR (`ocrs`) и выделение элементов по пикселям
 crates/hangui-mcp       MCP-сервер
+crates/hangui-http      локальный HTTP API (`hangui serve`) для тестов и SDK
 apps/hangui             CLI + TUI
+sdk/python, sdk/go, sdk/js, sdk/dotnet   клиенты HTTP API; sdk/conformance — общий набор проверок
 probes/qt5, probes/qt6  зонды (C++), собираются CI-матрицей
 ```
+
+## Поставка: один бинарь без зависимостей (D18)
+
+Итог сборки — один файл `hangui` (`hangui.exe`) на ОС/архитектуру, который
+умеет всё и ставится копированием. Сложность уходит в сборку: CI может
+качать тулчейны, кросс-компиляторы, заголовки и библиотеки Qt всех версий
+матрицы, SDK ОС — на машине пользователя ничего из этого не нужно.
+
+| ОС | Цель сборки | Что разрешено во время выполнения | Проверка |
+|---|---|---|---|
+| Linux x86_64/arm64 | `*-unknown-linux-gnu` против glibc 2.17 (`cargo zigbuild --target …-gnu.2.17`) | только glibc (libc, libm, ld-linux) — она есть в любом дистрибутиве с рабочим столом; D-Bus (`zbus`) и X11 (`x11rb`, `RustConnection`) — на чистом Rust; libpipewire — `dlopen` только для ScreenCast | `ldd hangui` — только glibc; запуск на чистой Ubuntu 18.04+, Debian, Fedora |
+| Windows x86_64/arm64 | `*-pc-windows-msvc`, `+crt-static` | только DLL самой Windows (user32, UIAutomationCore, d3d11, …) | `dumpbin /dependents` — только системные DLL; запуск на чистой Windows 10/11 |
+| macOS arm64/x86_64 | `*-apple-darwin` | только системные фреймворки и libSystem | `otool -L` — только `/System/Library` и `/usr/lib` |
+
+- **Профиль release:** `lto = "fat"`, `codegen-units = 1`, `strip = true`,
+  `opt-level` — `"s"` или `"z"` по замеру (размер против скорости OCR);
+  `panic = "abort"` — только если `serve`/`mcp` не теряют устойчивость
+  (паника обработчика не должна ронять сервер, иначе — `unwind`).
+- **Зонды** для этой ОС вшиты в бинарь сжатыми (`include_bytes!`, deflate
+  `miniz_oxide`) и при первом `launch` распаковываются в
+  `<cache>/hangui/<версия>/probes/` с проверкой sha256; отдельной установки
+  нет. Если набор зондов одной ОС > 2 МБ в сжатом виде — стоп-и-спроси
+  (вариант: скачивание, как модели OCR).
+- **Модели OCR** (`ocrs`, ~10 МБ) в бинарь не входят: при первом
+  обращении к `vision` скачиваются в `<cache>/hangui/models/` с проверкой
+  sha256, вшитой в бинарь, и сообщением в stderr (что, откуда, куда,
+  размер). `hangui fetch ocr` — заранее (CI, машины без сети: файл можно
+  положить вручную). Пачки 12 и 14 сравнивают `ocrs` с OCR ОС
+  (`Windows.Media.Ocr`, Vision): не хуже — берётся OCR ОС, ноль байт и без
+  скачивания.
+- **Скачивание** (модели) — `ureq` + `rustls` без OpenSSL; корневые
+  сертификаты — из хранилища ОС; зеркало — `HANGUI_DOWNLOAD_URL`, запрет —
+  `HANGUI_DOWNLOAD=0` (те же переменные, что у SDK, contracts.md §11.6).
+- **`<cache>`:** `HANGUI_CACHE_DIR`, иначе `$XDG_CACHE_HOME` (`~/.cache`) /
+  `%LOCALAPPDATA%` / `~/Library/Caches`.
+- **Релиз** (пачка 15) публикует каждый бинарь ещё и одиночным `.gz`
+  (`hangui-<версия>-<os>-<arch>.gz`) — его скачивают SDK (§11.6): gzip
+  распаковывает стандартная библиотека всех четырёх языков, tar и zip — нет.
 
 ## Что остаётся неизвестным (проверяют пачки)
 
@@ -106,3 +146,10 @@ probes/qt5, probes/qt6  зонды (C++), собираются CI-матрице
 - Можно ли одной сборкой зонда покрыть все Qt 5.x, избегая inline-кода — пачка 05.
 - Зонд в приложениях с защитой целостности (Kaspersky сам не помешал, другие
   могут) — фиксировать в матрице, пачка 10.
+- Укладывается ли бинарь со всем (tokio, `rmcp`, `axum`, `ratatui`, `ocrs`,
+  зонды, `rustls`) в 10 МБ — точка отсчёта в пачке 01, замер после каждой
+  пачки с новой зависимостью, итог — пачка 15.
+- Полностью статический musl-бинарь (работает и на Alpine) не может
+  `dlopen` libpipewire, собранную под glibc, поэтому Linux — glibc 2.17.
+  Переход на musl возможен, только если ScreenCast читается без libpipewire
+  (протокол PipeWire на чистом Rust) — решает владелец после пачки 06.

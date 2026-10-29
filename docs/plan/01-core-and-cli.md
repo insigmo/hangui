@@ -8,7 +8,8 @@
 JSON-фикстуре — платформенным пачкам остаётся реализовать трейт.
 
 ## Прочитать
-- [README.md](README.md) — решения D2, D6–D9.
+- [README.md](README.md) — решения D2, D6–D9, D18.
+- [architecture.md](architecture.md) — «Поставка».
 - [contracts.md](contracts.md) — целиком.
 
 ## Задачи
@@ -33,6 +34,10 @@ JSON-фикстуре — платформенным пачкам остаётс
    (`source: "probe"`).
 8. Поля `source`/`confidence` и ошибка `disabled` (§1, §6) — с первого дня:
    `do invoke` по выключенному узлу фикстуры → exit 9.
+9. Размер (D18): `[profile.release]` из architecture.md «Поставка»;
+   зависимости с `default-features = false`; `hangui version` (§5, поле
+   `protocol` = 1). Размер release-бинаря на Windows и в WSL (Linux) — в
+   PROGRESS как точка отсчёта бюджета.
 
 ## Не делать
 - Никакого кода AT-SPI/UIA/AX, никаких `cfg(target_os)`.
@@ -44,6 +49,7 @@ JSON-фикстуре — платформенным пачкам остаётс
   `not_found`, рендер text и json (snapshot-тест строкой).
 - `hangui --fixture tests/fixtures/sample-app.json tree` печатает дерево в
   формате §5; `do toggle '<selector>'` меняет `checked`; коды выхода — по §6.
+- `hangui version --format json` печатает `version`, `protocol`, `os`, `arch`.
 - fmt/clippy/test чисты.
 
 ## Стоп-и-спроси

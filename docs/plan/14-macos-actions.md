@@ -20,7 +20,9 @@
    текста, не для аккордов.
 3. Запасной путь `via: "input"`; `--no-fallback`.
 4. Захват окна: ScreenCaptureKit (разрешение Screen Recording — в `doctor`)
-   → `screenshot` и `tree --source vision`.
+   → `screenshot` и `tree --source vision`. Сравнить `ocrs` с Vision
+   (`VNRecognizeTextRequest`): не хуже — на macOS OCR ОС, модели не
+   скачиваются (architecture.md «Поставка»).
 5. Зонд — только для приложений без hardened runtime
    (`DYLD_INSERT_LIBRARIES`); остальным — ступени a11y и vision. `doctor`
    говорит, какой случай.

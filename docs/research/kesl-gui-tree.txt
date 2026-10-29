@@ -1,0 +1,19 @@
+kesl-gui 12.5.0.1569 — дерева AT-SPI нет (бандл Qt 5.9.5 собран без моста AT-SPI,
+см. linux-probe.md). Ниже — всё, что о нём видно снаружи без синтетического ввода.
+
+X11 (XWayland :0), `xwininfo -root -tree`:
+  0xe00081 "Kaspersky Endpoint Security 12.5 for Linux": ("mutter-x11-frames" "mutter-x11-frames")  1050x667+148+64  +148+64
+     0x800004 "Kaspersky Endpoint Security 12.5 for Linux": ("kesl-gui" "kesl-gui")  1000x580+25+62  +173+126
+  _NET_WM_PID = 9320, WM_CLASS = "kesl-gui", "kesl-gui"
+
+AT-SPI (`Atspi.get_desktop(0)`): приложения kesl-gui нет; в gnome-shell окно видно
+только как `panel 'X11 window' > panel 'Wayland surface'` без имени и детей.
+
+Для сравнения — эталон приложения с мостом (gnome-calculator, GTK4, Wayland), фрагмент:
+application "gnome-calculator" id='org.gnome.Calculator'
+  frame "Calculator" id='MathWindow' scr=0,0,360x616 win=0,0 acts=[win.close, window.minimize, default.activate, ...]
+    ...
+      text "" id='source_view' scr=0,0,314x46 win=0,287
+      ...
+        button "7" id='' scr=0,0,56x40 win=24,428 acts=['click']
+          label "7"

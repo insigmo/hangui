@@ -17,7 +17,8 @@
   `WAYLAND_DISPLAY` для ввода). Lumepeer упирался в то же на Secret Service
   по SSH. **[lumepeer: docs/platform-support.md]**
 - Если GUI запущен от root (`sudo kesl-gui`), его объекты на шине доступности
-  root-сеанса — пользовательский процесс их не увидит. **[проверить]**
+  root-сеанса — пользовательский процесс их не увидит. **[док]** (kesl-gui на
+  стенде работает от пользователя — вопрос не встал, `docs/research/linux-probe.md`)
 
 ### Включение доступности в тулкитах
 - Флаг `org.a11y.Status.IsEnabled` (свойство на сессионной шине) — сигнал
@@ -28,18 +29,29 @@
   GTK4: встроенный AT-SPI бэкенд. **[док]**
 - Qt5/Qt6: регистрируются, если `IsEnabled=true`, либо при
   `QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1` (у старых Qt5 — `QT_ACCESSIBILITY=1`).
-  **[док]** kesl-gui предположительно на Qt **[проверить в 00]**.
+  **[док]**
+- **Приложение со своим Qt может не иметь моста вовсе.** kesl-gui 12.5 везёт
+  Qt 5.9.5, собранный без AT-SPI: ни `IsEnabled`, ни
+  `QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1` его не показывают. Признак — в
+  xcb-плагине (`libqxcb.so`/`libQt5XcbQpa.so`) нет строки `org.a11y`
+  (проверять и 8-битные, и UTF-16 строки). `doctor` должен уметь это сказать.
+  **[проверено в 00: docs/research/linux-probe.md]**
+- Ubuntu задаёт `QT_ACCESSIBILITY=1` глобально; это не мост AT-SPI. **[проверено в 00]**
 - Chromium/Electron: дерево веб-контента появляется с
   `--force-renderer-accessibility`; без флага — только рамка окна. **[проверить в 08]**
 - Java Swing: нужен `java-atk-wrapper` — вне плана.
 
 ### Координаты
 - X11: `Component.GetExtents(Screen)` даёт экранные координаты. **[док]**
-- Wayland: у клиента нет глобальных координат; GTK/Qt под Wayland отдают
-  координаты относительно окна или нули. Hit-test `--at X,Y` и клик по
-  координатам на Wayland ненадёжны — опираться на семантические действия.
-  **[проверить в 03]** Для `bounds` правило из contracts.md §1: не
-  подставлять оконные координаты как экранные.
+- Wayland: у клиента нет глобальных координат. GTK4 на GNOME 50:
+  `GetExtents(SCREEN)` = `0,0` у каждого узла, `GetExtents(WINDOW)` —
+  правильные координаты в окне. **[проверено в 00 на gnome-calculator]**
+  Hit-test `--at X,Y` и клик по координатам на Wayland — опираться на
+  семантические действия. Для `bounds` правило из contracts.md §1: не
+  подставлять оконные координаты как экранные. Qt под Wayland —
+  **[проверить в 08]**.
+- GTK4: `Action.DoAction(click)` и `EditableText.SetTextContents` работают;
+  `Component.GrabFocus` возвращает ошибку. **[проверено в 00]**
 
 ### Синтетический ввод
 - Тип сеанса: `XDG_SESSION_TYPE`, затем `WAYLAND_DISPLAY`, затем `DISPLAY`;
@@ -58,6 +70,10 @@
   `unsupported`, совет «войти в сеанс Cinnamon (X11)». **[lumepeer: ADR 0166]**
 - Абсолютные координаты в портале — в координатах потока ScreenCast, т.е.
   для ввода по координатам на Wayland нужен ещё и выбор монитора. **[lumepeer: ADR 0010]**
+- XTest в XWayland не обходит портал: на GNOME XWayland запущен с
+  `-enable-ei-portal`, и `XTestFakeMotionEvent` ничего не двигает, а
+  открывает диалог «Remote Desktop». Для X11-клиентов на Wayland-сеансе
+  нужен тот же портал. **[проверено в 00: XWayland 24.1.10, GNOME 50]**
 - `/dev/uinput` (ydotool) требует root или udev-правила — вне плана.
 
 ## Windows

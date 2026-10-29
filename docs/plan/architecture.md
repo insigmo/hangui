@@ -96,9 +96,13 @@ crates/hangui-vision    OCR (`ocrs`) и выделение элементов п
 crates/hangui-mcp       MCP-сервер
 crates/hangui-http      локальный HTTP API (`hangui serve`) для тестов и SDK
 apps/hangui             CLI + TUI
-sdk/python, sdk/go, sdk/js, sdk/dotnet   клиенты HTTP API; sdk/conformance — общий набор проверок
+conformance/            набор совместимости SDK: cases.json + фикстура; уходит в релиз
 probes/qt5, probes/qt6  зонды (C++), собираются CI-матрицей
 ```
+
+SDK (Python, Go, TS/JS, C#) — в отдельных репозиториях `hangui-<язык>`
+(D20). Они видят hangui только снаружи: релизный бинарь, HTTP API §10,
+`checksums.json` и `hangui-conformance-<версия>.tar.gz` из релиза.
 
 ## Поставка: один бинарь без зависимостей (D18)
 

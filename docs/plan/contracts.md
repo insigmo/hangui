@@ -288,7 +288,10 @@ hangui serve [--port N] [--host 127.0.0.1] [--token T] [--fixture F]
 котором `cause` — последняя причина (`not_found`, `ambiguous` с
 `candidates`, `disabled`).
 
-## 11. Общий контракт SDK (`sdk/*`, пачки 17–20)
+## 11. Общий контракт SDK (репозитории `hangui-<язык>`, пачки 17–20)
+
+SDK живут в отдельных репозиториях (README D20) и ссылаются на этот раздел
+по тегу версии hangui (`…/blob/v<версия>/docs/plan/contracts.md`).
 
 Имена ниже — нейтральные; каждый SDK пишет их в стиле языка
 (`wait_gone` / `WaitGone` / `waitGone` / `WaitGoneAsync`).
@@ -353,10 +356,15 @@ hangui serve [--port N] [--host 127.0.0.1] [--token T] [--fixture F]
 - Интеграция с раннерами: сервер на прогон (`start`, в конце `close`),
   приложение на тест (закрывается в teardown), при падении — снимок окна и
   текстовое дерево (§5) в артефакты теста.
-- Каждый SDK проходит `sdk/conformance/cases.json` против
-  `hangui serve --port 0 --fixture tests/fixtures/sample-app.json`.
-- Версия SDK = версия hangui; `protocol` растёт только при несовместимом
-  изменении §10.
+- Каждый SDK проходит набор совместимости против
+  `hangui serve --port 0 --fixture sample-app.json`. Набор — артефакт
+  релиза hangui `hangui-conformance-<версия>.tar.gz`: `cases.json` (запрос →
+  ожидаемый ответ/ошибка) и `fixtures/sample-app.json`; в репозитории
+  hangui — каталог `conformance/`. CI SDK скачивает набор и бинарь той
+  версии hangui, под которую выпускается SDK (файл версии в корне
+  репозитория SDK), исходники hangui ему не нужны.
+- Версия SDK = версия hangui: SDK выходит после релиза hangui той же
+  версии; `protocol` растёт только при несовместимом изменении §10.
 - Каждый SDK проверяет §11.6 против локального HTTP-сервера с поддельным
   релизом (`HANGUI_DOWNLOAD_URL=http://127.0.0.1:…`, пустой `PATH`,
   временный `HANGUI_CACHE_DIR`): скачал, распаковал, запустил, сообщения в

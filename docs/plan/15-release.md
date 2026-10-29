@@ -8,7 +8,7 @@
 (D19).
 
 ## Прочитать
-- [README.md](README.md) — D18, D19; [contracts.md](contracts.md) §5, §7, §11.6.
+- [README.md](README.md) — D18–D20; [contracts.md](contracts.md) §5, §7, §11.6.
 - [architecture.md](architecture.md) — «Поставка».
 - `docs/linux-matrix.md` (из 10).
 
@@ -19,8 +19,10 @@
    2.17), windows x86_64/arm64 (`+crt-static`), macos arm64/x86_64 — по
    architecture.md «Поставка», с CI-матрицей зондов внутри. Артефакты:
    архивы для людей, одиночные `hangui-<версия>-<os>-<arch>.gz` для SDK,
-   `SHA256SUMS`, и `dist/checksums.json` (sha256 распакованных бинарей) —
-   его вшивают в пакеты SDK при их сборке (§11.6).
+   `SHA256SUMS`, и `checksums.json` (sha256 распакованных бинарей) —
+   его вшивают в пакеты SDK при их сборке в своих репозиториях (§11.6,
+   D20). Если пачка 16 уже сделана — и `hangui-conformance-<версия>.tar.gz`
+   (§11.5); иначе это добавляет 16.
 3. Проверка «без зависимостей» в CI на каждый бинарь: `ldd` — только glibc,
    `dumpbin /dependents` — только DLL Windows, `otool -L` — только
    системные; запуск `hangui version` и `hangui --fixture … tree` в чистых

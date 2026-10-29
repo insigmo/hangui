@@ -2,18 +2,22 @@
 
 Зависит от: 16 | Стенд: любая ОС на фикстуре; Ubuntu VM для приёмки | Параллельно с 18, 19, 20
 
+Репозиторий: **`insigmo/hangui-python`** — отдельный (D20), создаёт
+владелец. Пути ниже — от его корня; этот план, contracts.md и PROGRESS —
+в репозитории hangui.
+
 ## Цель
 ИИ пишет на Python тест, который потом сам по себе запускается `pytest`:
 фикстура поднимает (или находит) hangui, тест запускает приложение, жмёт,
 проверяет, закрывает.
 
 ## Прочитать
-- [README.md](README.md) — D14–D19.
+- [README.md](README.md) — D14–D20.
 - [contracts.md](contracts.md) §3, §4, §6, §10, §11.
-- `sdk/conformance/cases.json`.
+- Набор совместимости из релиза hangui (§11.5).
 
 ## Задачи
-1. `sdk/python/` — пакет `hangui` (PyPI), Python ≥3.9, `pyproject.toml`
+1. Корень репозитория — пакет `hangui` (PyPI), Python ≥3.9, `pyproject.toml`
    (hatchling), **без зависимостей во время выполнения** (`urllib.request`,
    `json`, `subprocess`). Полные аннотации типов, `py.typed`.
 2. Клиент по §11: `hangui.is_running(url=None)`, `hangui.connect(...)`,
@@ -23,8 +27,8 @@
    `hangui.launch(command, ...)` → `App`, владеющий своим сервером (§11.2).
    Поиск и скачивание бинаря — §11.6 (`hangui.ensure_binary()`): stdlib
    (`urllib.request`, `gzip`, `hashlib`, блокировка — `fcntl`/`msvcrt`),
-   таблица sha256 — модуль `hangui/_checksums.py`, генерируется из
-   `dist/checksums.json` при релизе; сообщения — `print(..., file=sys.stderr)`.
+   таблица sha256 — модуль `hangui/_checksums.py`, генерируется при сборке пакета из
+   `checksums.json` релиза hangui той же версии; сообщения — `print(..., file=sys.stderr)`.
    `python -m hangui fetch` — то же из консоли (для образов CI).
 3. Методы — по §11.3 в snake_case: `apps()`, `launch(...)` → `App`
    (`app.close()`, `app.locator(...)`), `tree`, `find`, `inspect`, `wait`,
@@ -40,10 +44,11 @@
    запуск в тесте, закрытие в teardown), опции `--hangui-port`,
    `--hangui-url`, `--hangui-bin`, `--hangui-fixture`. При падении теста —
    снимок экрана и текстовое дерево приложения в `tmp_path` и в отчёт.
-6. Тесты пакета: `sdk/conformance/cases.json` против
+6. Тесты пакета: набор совместимости против
    `hangui serve --port 0 --fixture …`; юнит-тесты разбора настроек;
-   пример `sdk/python/examples/test_sample_app.py` на фикстуре.
-7. CI-задача: Python 3.9 и 3.13 на ubuntu/windows/macos.
+   пример `examples/test_sample_app.py` на фикстуре.
+7. CI: Python 3.9 и 3.13 на ubuntu/windows/macos; бинарь и набор
+   совместимости — из релиза hangui версии из файла `HANGUI_VERSION` (§11.5).
 
 ## Не делать
 - async-API (`asyncio`) — после первого релиза, если попросят.
@@ -51,7 +56,7 @@
 - Обёртки над unittest/robotframework — достаточно обычного клиента.
 
 ## Готово, когда
-- `pytest sdk/python` зелёный на фикстуре, conformance пройден полностью.
+- `pytest` зелёный на фикстуре, conformance пройден полностью.
 - На стенде: тест из трёх строк (`hangui_app("kesl-gui")` →
   `locator('button[name="View"]').invoke()` → `wait`) проходит под
   `pytest` без ИИ; второй запуск при уже работающем `hangui serve` его
@@ -63,4 +68,6 @@
 - `mypy --strict` и `ruff` чисты.
 
 ## Стоп-и-спроси
+- API или набору совместимости чего-то не хватает — не обходить в SDK, а
+  записать задачу для репозитория hangui (README «Общие правила»).
 - Имя `hangui` на PyPI занято — предложить другое до публикации (21).

@@ -2,18 +2,21 @@
 
 Зависит от: 16 | Стенд: любая ОС на фикстуре; Ubuntu VM для приёмки | Параллельно с 17, 19, 20
 
+Репозиторий: **`insigmo/hangui-go`** — отдельный (D20), создаёт владелец.
+Пути ниже — от его корня; этот план, contracts.md и PROGRESS — в
+репозитории hangui.
+
 ## Цель
 ИИ пишет на Go тест (`go test`), который поднимает или находит hangui через
 `TestMain`/`t.Cleanup` и работает с приложением по HTTP API.
 
 ## Прочитать
-- [README.md](README.md) — D14–D19.
+- [README.md](README.md) — D14–D20.
 - [contracts.md](contracts.md) §3, §4, §6, §10, §11.
-- `sdk/conformance/cases.json`.
+- Набор совместимости из релиза hangui (§11.5).
 
 ## Задачи
-1. `sdk/go/` — модуль `<путь репозитория>/sdk/go` (путь уточнить у
-   владельца по `git remote`), пакет `hangui`, Go ≥1.22, **только
+1. Корень репозитория — модуль `github.com/insigmo/hangui-go`, пакет `hangui`, Go ≥1.22, **только
    стандартная библиотека** (`net/http`, `encoding/json`, `os/exec`).
 2. Клиент по §11: `hangui.IsRunning(ctx, url)`, `hangui.Connect(ctx, opts)`,
    `hangui.Start(ctx, opts)` → `*Client`; `Close()` останавливает только
@@ -22,7 +25,8 @@
    `hangui.Launch(ctx, cmd, ...)` → `*App`, владеющий своим сервером (§11.2).
    Поиск и скачивание бинаря — §11.6 (`hangui.EnsureBinary(ctx, opts)`):
    stdlib (`net/http`, `compress/gzip`, `crypto/sha256`), таблица sha256 —
-   `checksums_gen.go` из `dist/checksums.json` при релизе; сообщения —
+   `checksums_gen.go` из `checksums.json` релиза hangui той же версии
+   (`go generate` перед тегом, файл коммитится — Go proxy берёт исходники); сообщения —
    `os.Stderr`. `go run <модуль>/cmd/hangui-fetch` — то же из консоли.
 3. Методы — по §11.3 в CamelCase, первым аргументом `context.Context`:
    `Apps`, `Launch` → `*App` (`Close`, `Locator`), `Tree`, `Find`,
@@ -38,17 +42,18 @@
    остановка через `t.Cleanup`), `hanguitest.Launch(t, c, cmd, ...)`
    (закрытие через `t.Cleanup`), при `t.Failed()` — снимок и дерево в
    `t.TempDir()` с путём в `t.Log`. Флаги/окружение — §11.1.
-6. Тесты: conformance против `hangui serve --port 0 --fixture …`; пример
-   `sdk/go/example_test.go` (Example-функция для godoc) и
-   `sdk/go/examples/sample_app_test.go`.
-7. CI-задача: `go vet`, `go test ./...` на ubuntu/windows/macos.
+6. Тесты: набор совместимости против `hangui serve --port 0 --fixture …`;
+   пример `example_test.go` (Example-функция для godoc) и
+   `examples/sample_app_test.go`.
+7. CI: `go vet`, `go test ./...` на ubuntu/windows/macos; бинарь и набор
+   совместимости — из релиза hangui версии из файла `HANGUI_VERSION` (§11.5).
 
 ## Не делать
 - Сторонние зависимости (testify и т.п.) в модуле SDK.
 - Генерацию клиента из OpenAPI: API маленький, ручной клиент проще.
 
 ## Готово, когда
-- `go test ./...` в `sdk/go` зелёный на фикстуре, conformance пройден.
+- `go test ./...` зелёный на фикстуре, conformance пройден.
 - На стенде: тест с `hanguitest.Start` + `Launch("kesl-gui")` + `Invoke`
   проходит под `go test` без ИИ; при уже работающем `hangui serve`
   используется он.
@@ -58,5 +63,6 @@
 - `go vet` и `staticcheck` чисты.
 
 ## Стоп-и-спроси
-- Модуль в подкаталоге монорепозитория неудобен для `go get` (теги
-  `sdk/go/vX.Y.Z`) — предложить отдельный репозиторий до публикации (21).
+- API или набору совместимости чего-то не хватает — не обходить в SDK, а
+  записать задачу для репозитория hangui (README «Общие правила»).
+- Путь модуля, если репозиторий назван иначе, — до первого тега (21).

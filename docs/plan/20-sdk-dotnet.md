@@ -2,17 +2,21 @@
 
 Зависит от: 16 | Стенд: Windows-машина владельца на фикстуре; Ubuntu VM для приёмки | Параллельно с 17, 18, 19
 
+Репозиторий: **`insigmo/hangui-dotnet`** — отдельный (D20), создаёт
+владелец. Пути ниже — от его корня; этот план, contracts.md и PROGRESS —
+в репозитории hangui.
+
 ## Цель
 ИИ пишет тест на xUnit, NUnit или MSTest: фикстура класса/сборки поднимает
 или находит hangui и работает с приложением по HTTP API.
 
 ## Прочитать
-- [README.md](README.md) — D14–D19.
+- [README.md](README.md) — D14–D20.
 - [contracts.md](contracts.md) §3, §4, §6, §10, §11.
-- `sdk/conformance/cases.json`.
+- Набор совместимости из релиза hangui (§11.5).
 
 ## Задачи
-1. `sdk/dotnet/` — решение с пакетом `Hangui` (NuGet), цели `net8.0` и
+1. Корень репозитория — решение с пакетом `Hangui` (NuGet), цели `net8.0` и
    `netstandard2.0`, зависимости — только `System.Text.Json` (для
    netstandard2.0). Nullable включён, XML-документация в пакете.
 2. Клиент по §11: `HanguiClient.IsRunningAsync(...)`,
@@ -24,8 +28,8 @@
    Поиск и скачивание бинаря — §11.6 (`Hangui.EnsureBinaryAsync()`):
    `HttpClient`, `GZipStream`, `SHA256` (всё есть в netstandard2.0);
    `chmod +x` на Linux/macOS — `File.SetUnixFileMode` на net8.0, на
-   netstandard2.0 — `chmod` через `Process`. Таблица sha256 — генерируемый
-   `Checksums.g.cs` из `dist/checksums.json`; сообщения — `Console.Error`.
+   netstandard2.0 — `chmod` через `Process`. Таблица sha256 — генерируемый при
+   сборке `Checksums.g.cs` из `checksums.json` релиза hangui той же версии; сообщения — `Console.Error`.
 3. Методы — по §11.3 в PascalCase с суффиксом `Async` и
    `CancellationToken`: `AppsAsync`, `LaunchAsync` → `HanguiApp`
    (`CloseAsync`, `Locator`), `TreeAsync`, `FindAsync`, `InspectAsync`,
@@ -43,16 +47,18 @@
    `ICollectionFixture`, `AppFixture`); для NUnit и MSTest — примеры
    `[OneTimeSetUp]`/`[AssemblyInitialize]` в документации, без пакетов.
    При падении — снимок и дерево в каталог результатов теста.
-6. Тесты: conformance на xUnit против `hangui serve --port 0 --fixture …`;
-   примеры `sdk/dotnet/examples/` (xUnit, NUnit, MSTest).
-7. CI-задача: `dotnet test` на ubuntu/windows/macos.
+6. Тесты: набор совместимости на xUnit против
+   `hangui serve --port 0 --fixture …`; примеры `examples/` (xUnit, NUnit,
+   MSTest).
+7. CI: `dotnet test` на ubuntu/windows/macos; бинарь и набор совместимости —
+   из релиза hangui версии из файла `HANGUI_VERSION` (§11.5).
 
 ## Не делать
 - Синхронные дубли методов (`.Result` в тестах — на совести пользователя).
 - Пакеты `Hangui.NUnit`/`Hangui.MSTest` — пока хватает примеров.
 
 ## Готово, когда
-- `dotnet test sdk/dotnet` зелёный на фикстуре, conformance пройден, сборка
+- `dotnet test` зелёный на фикстуре, conformance пройден, сборка
   без предупреждений (`TreatWarningsAsErrors`).
 - На стенде: xUnit-тест с `HanguiFixture` запускает kesl-gui, нажимает
   «View», ждёт результат, закрывает — без ИИ.
@@ -61,5 +67,7 @@
   §11.5 на скачивание проходят.
 
 ## Стоп-и-спроси
+- API или набору совместимости чего-то не хватает — не обходить в SDK, а
+  записать задачу для репозитория hangui (README «Общие правила»).
 - Префикс `Hangui` на NuGet занят или требует резервирования — до
   публикации (21).

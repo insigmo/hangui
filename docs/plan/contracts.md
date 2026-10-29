@@ -12,6 +12,8 @@ JSON-вид (поле опускается, если ОС его не дала; 
   "ref": "e12",
   "role": "button",
   "native_role": "push button",
+  "source": "a11y",
+  "confidence": 1.0,
   "name": "Scan",
   "description": "Start a full scan",
   "value": "42",
@@ -28,6 +30,10 @@ JSON-вид (поле опускается, если ОС его не дала; 
 ```
 
 - `ref` — есть только в MCP/TUI (D7). В CLI отсутствует.
+- `source` — `a11y` | `probe` | `cdp` | `vision` (architecture.md).
+  `confidence` — только у `vision` (0..1); у остальных поле опускается.
+- `class` — класс тулкита (`QPushButton`, `KLButton_QMLTYPE_10`, UIA
+  `ClassName`, DOM-тег для `cdp`).
 - `native_id` — UIA `AutomationId`, AT-SPI `accessible_id` (атрибут `id`),
   AX `AXIdentifier`.
 - `bounds` — экранные координаты в физических пикселях (Windows, X11) или
@@ -62,7 +68,7 @@ combinator := ">"        прямой потомок
             | ">>"       любой потомок
 step     := (role | "*") filter* pseudo*
 filter   := "[" attr op "\"" value "\"" "]"
-attr     := name | id | class | value | description | native_role | app | pid
+attr     := name | id | class | value | description | native_role | app | pid | source
 op       := "="  точное | "~=" подстрока без учёта регистра | "^=" начало | "$=" конец
 pseudo   := ":nth(N)"  (с 1, среди совпавших у одного родителя)
           | ":enabled" | ":focused" | ":visible" | ":checked" | ":selected"
@@ -95,15 +101,20 @@ window[name~="kaspersky"] >> tab_list > tab:nth(2)
 ```json
 { "ok": true, "action": "invoke", "via": "semantic", "target": { ...Node } }
 ```
-`via: "input"` — если семантика недоступна и сработал запасной путь; флаг
-`--no-fallback` запрещает его.
+`via`: `semantic` (API доступности или семантика зонда), `in_process`
+(событие тулкита, отправленное зондом внутри процесса), `input` (ввод ОС по
+координатам). Порядок попыток — этот же; `--no-fallback` разрешает только
+`semantic`. Перед действием узел перечитывается: нет `enabled` → `disabled`.
 
 ## 5. CLI (`hangui`)
 
 ```
-hangui doctor
+hangui doctor [<app>]                       окружение; для app — доступные ступени
+hangui launch [--probe auto|qt5|qt6|none] [--cdp] -- <cmd> [args]
+                                            запуск приложения с зондом/CDP
 hangui apps                                 [--format text|json]
-hangui tree [<selector>] [--depth N] [--all] [--format text|json]
+hangui tree [<selector>] [--depth N] [--all] [--source S] [--format text|json]
+hangui screenshot (<selector> | --app A) -o <file.png>
 hangui find <selector>                      [--format text|json]
 hangui inspect (<selector> | --at X,Y | --focused) [--format text|json]
 hangui watch [--focus] [--hover]            поток событий до Ctrl+C
@@ -142,6 +153,7 @@ window "Kaspersky Endpoint Security" [focused]
 | `permission_denied` | 6 | ОС отказала, есть что включить; несёт `fix` |
 | `timeout` | 7 | `wait` или действие не дождались |
 | `stale` | 8 | ссылка/элемент больше не существует |
+| `disabled` | 9 | элемент выключен (`enabled` нет), действие не выполнялось |
 
 JSON ошибки: `{ "error": "permission_denied", "message": "...", "fix": "..." }`.
 
@@ -149,8 +161,11 @@ JSON ошибки: `{ "error": "permission_denied", "message": "...", "fix": "..
 
 | Инструмент | Аргументы | Возвращает |
 |---|---|---|
-| `list_apps` | — | приложения (имя, pid) |
-| `snapshot` | `app?`, `selector?`, `depth?` | текстовое дерево со ссылками `[e12]` |
+| `list_apps` | — | приложения (имя, pid, доступные ступени) |
+| `launch` | `command`, `args?`, `probe?` | pid; приложение с зондом |
+| `snapshot` | `app?`, `selector?`, `depth?`, `source?` | текстовое дерево со ссылками `[e12]`; для `vision` — плюс PNG окна |
+| `screenshot` | `app` \| `ref` | PNG |
+| `click_at` | `app`, `x`, `y` (в окне) | результат §4, `via: input` |
 | `find` | `selector` | узлы со ссылками |
 | `inspect` | `ref` \| `selector` | все свойства узла |
 | `act` | `ref` \| `selector`, `action`, `value?` | результат §4 |
@@ -175,5 +190,23 @@ pub trait Provider {
 }
 ```
 `Handle` — непрозрачный платформенный указатель (AT-SPI: bus name + object
-path; UIA: элемент + RuntimeId; AX: `AXUIElementRef`). События (`watch`)
-добавляет пачка 03 отдельным методом.
+path; UIA: элемент + RuntimeId; AX: `AXUIElementRef`; зонд: pid + id объекта;
+vision: окно + прямоугольник). События (`watch`) добавляет пачка 03
+отдельным методом. Несколько провайдеров (a11y, зонд, CDP, vision)
+объединяет `hangui-core` (пачка 05 вводит слияние).
+
+## 9. Протокол зондов (`probes/*` ↔ `hangui-probe`)
+
+Сокет: Linux/macOS — `$XDG_RUNTIME_DIR/hangui/<toolkit>-<pid>.sock`
+(иначе `$TMPDIR`), права только владельца; Windows — named pipe
+`\\.\pipe\hangui-<toolkit>-<pid>`. Одна JSON-строка на запрос и на ответ.
+
+| Запрос | Ответ |
+|---|---|
+| `{"cmd":"hello"}` | `{"toolkit":"qt5","version":"5.9.5","pid":…,"app":"…","protocol":1}` |
+| `{"cmd":"tree","depth":N?}` | `{"windows":[{id,class,title,visible,geometry,root}]}`; узел: `id`, `class`, `objectName?`, `visible`, `enabled`, `rect` (в окне), `props{}`, `acc{role,name,description?,value?,states[],actions[]}?`, `children[]?` |
+| `{"cmd":"act","id":…,"action":"invoke"\|"focus"\|"set_value"\|"toggle",…}` | `{"ok":true,"via":"semantic"\|"in_process"}` или ошибка §6 |
+| `{"cmd":"key","id"?:…,"chord":"ctrl+a"}`, `{"cmd":"type","id"?:…,"text":"…"}` | как `act` |
+
+`id` живёт, пока жив объект; мёртвый → `stale`. PoC (`probes/qt5`, команды
+`tree`/`click`) — предшественник; пачка 05 приводит его к этой таблице.

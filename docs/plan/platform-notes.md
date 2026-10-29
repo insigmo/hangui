@@ -76,6 +76,27 @@
   нужен тот же портал. **[проверено в 00: XWayland 24.1.10, GNOME 50]**
 - `/dev/uinput` (ydotool) требует root или udev-правила — вне плана.
 
+### Захват пикселей
+- `XGetImage` окна XWayland-клиента на GNOME/Wayland работает без портала
+  (окно kesl-gui, 47 различных цветов в выборке). **[проверено в 00]**
+
+### Зонд внутри процесса (Qt)
+- Qt 5 экспортирует `qtHookData` (хук `Startup`, индекс 5) — точка входа
+  зонда, как у GammaRay. `LD_PRELOAD` срабатывает, если у бинаря нет file
+  capabilities и setuid (`getcap` пусто у kesl-gui). **[проверено: docs/research/qt-probe-poc.md]**
+- Зонд собирать под точную минорную версию Qt цели: заголовки 5.15 против
+  5.9 дали пустой JSON (раскладка `QJsonObject`). Линковать с библиотеками
+  цели (`-Wl,--no-undefined`), `-static-libstdc++` (свой libstdc++ у
+  приложения может быть старым). **[проверено]**
+- Не запускать цель через shell-обёртку с `LD_PRELOAD`: зонд попадёт и в
+  `/bin/sh`. Повторить окружение обёртки и запустить бинарь. **[проверено]**
+- `ptrace_scope=1` (Ubuntu по умолчанию): подключиться к уже работающему
+  процессу может только родитель или root → основной путь — `hangui launch`.
+  **[проверено в 00: `/proc/sys/kernel/yama/ptrace_scope`]**
+- `QAccessible::isActive()` без платформенного моста остаётся `false`, но
+  `queryAccessibleInterface` отдаёт роли/действия; имена кастомных QML-кнопок
+  пустые — брать свойство `text`. **[проверено]**
+
 ## Windows
 
 - UIA-клиент: `CoInitializeEx(COINIT_MULTITHREADED)`, `CUIAutomation8`.

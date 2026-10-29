@@ -1,13 +1,13 @@
-# Пачка 13 — Сборка, CI, релиз, документация
+# Пачка 15 — Сборка, CI, релиз, документация
 
-Зависит от: 06, 10, 12 | Стенд: GitHub Actions
+Зависит от: 08, 12, 14 | Стенд: GitHub Actions
 
 ## Цель
 Любой человек скачивает бинарь, запускает `hangui doctor` и начинает.
 
 ## Прочитать
 - [README.md](README.md), [contracts.md](contracts.md) §5, §7.
-- `docs/linux-matrix.md` (из 08).
+- `docs/linux-matrix.md` (из 10).
 
 ## Задачи
 1. CI: fmt, clippy, test на ubuntu/windows/macos; Linux-сборка без

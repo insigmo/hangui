@@ -1,0 +1,5505 @@
+{
+ "accessible_active": false,
+ "app": "kesl-gui",
+ "pid": 13676,
+ "qt": "5.9.5",
+ "windows": [
+  {
+   "class": "QQuickApplicationWindow_QML_39",
+   "geometry": {
+    "h": 580,
+    "w": 1000,
+    "x": 173,
+    "y": 126
+   },
+   "id": "q5f1113c268d0",
+   "root": {
+    "children": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "acc": {
+           "actions": [],
+           "name": "",
+           "rect": {
+            "h": 580,
+            "w": 1000,
+            "x": 173,
+            "y": 126
+           },
+           "role": 128,
+           "states": [
+            "focused"
+           ]
+          },
+          "children": [
+           {
+            "acc": {
+             "actions": [
+              "SetFocus"
+             ],
+             "name": "",
+             "rect": {
+              "h": 0,
+              "w": 0,
+              "x": 0,
+              "y": 0
+             },
+             "role": 37,
+             "states": [
+              "invisible",
+              "offscreen",
+              "focusable"
+             ]
+            },
+            "children": [
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": true,
+                    "id": "q5f111420dec0",
+                    "props": {
+                     "text": "Help"
+                    },
+                    "scene": {
+                     "h": 26,
+                     "w": 31,
+                     "x": -984,
+                     "y": 551
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": true,
+                      "id": "q5f111420f5e0",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": -953,
+                       "y": 556
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": true,
+                    "id": "q5f111420ea10",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": -953,
+                     "y": 556
+                    },
+                    "visible": false
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": true,
+                    "id": "q5f111420fc00",
+                    "scene": {
+                     "h": 26,
+                     "w": 31,
+                     "x": -984,
+                     "y": 551
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7",
+                  "enabled": true,
+                  "id": "q5f1114204d30",
+                  "scene": {
+                   "h": 26,
+                   "w": 31,
+                   "x": -984,
+                   "y": 551
+                  },
+                  "visible": false
+                 },
+                 {
+                  "class": "QQuickRectangle",
+                  "enabled": true,
+                  "id": "q5f1114210ff0",
+                  "scene": {
+                   "h": 1,
+                   "w": 1000,
+                   "x": -1000,
+                   "y": 548
+                  },
+                  "visible": false
+                 }
+                ],
+                "class": "QQuickRectangle_QML_61",
+                "enabled": true,
+                "id": "q5f1114204860",
+                "scene": {
+                 "h": 32,
+                 "w": 1000,
+                 "x": -1000,
+                 "y": 548
+                },
+                "visible": false
+               }
+              ],
+              "class": "QQuickRowLayout_QML_60",
+              "enabled": true,
+              "id": "q5f11141da750",
+              "scene": {
+               "h": 32,
+               "w": 1000,
+               "x": -1000,
+               "y": 548
+              },
+              "visible": false
+             },
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage_QML_53",
+                    "enabled": true,
+                    "id": "q5f1114219f10",
+                    "props": {
+                     "source": "qrc:/infotab-protected"
+                    },
+                    "scene": {
+                     "h": 364,
+                     "w": 364,
+                     "x": -982,
+                     "y": 18
+                    },
+                    "visible": false
+                   },
+                   {
+                    "class": "QQuickImage_QML_54",
+                    "enabled": true,
+                    "id": "q5f111421b3f0",
+                    "props": {
+                     "source": "qrc:/infotab-warning"
+                    },
+                    "scene": {
+                     "h": 364,
+                     "w": 364,
+                     "x": -982,
+                     "y": 18
+                    },
+                    "visible": false
+                   },
+                   {
+                    "class": "QQuickImage_QML_55",
+                    "enabled": true,
+                    "id": "q5f111421c0e0",
+                    "props": {
+                     "source": "qrc:/infotab-critical"
+                    },
+                    "scene": {
+                     "h": 364,
+                     "w": 364,
+                     "x": -982,
+                     "y": 18
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": true,
+                      "id": "q5f111421d4c0",
+                      "props": {
+                       "source": "qrc:/status-critical"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": -842,
+                       "y": 148
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "QQuickImage_QML_56",
+                    "enabled": true,
+                    "id": "q5f111421cec0",
+                    "props": {
+                     "source": "qrc:/status-critical"
+                    },
+                    "scene": {
+                     "h": 140,
+                     "w": 120,
+                     "x": -842,
+                     "y": 148
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "class": "QQuickText_QML_8",
+                        "enabled": true,
+                        "id": "q5f111421fa10",
+                        "props": {
+                         "text": "The application is currently unavailable"
+                        },
+                        "scene": {
+                         "h": 104,
+                         "w": 576,
+                         "x": -606,
+                         "y": 126
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickImage",
+                          "enabled": true,
+                          "id": "q5f11142211a0",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 0,
+                           "w": 0,
+                           "x": -30,
+                           "y": 170
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickImage_QML_9",
+                        "enabled": true,
+                        "id": "q5f11142206a0",
+                        "props": {
+                         "source": "qrc:/link-external"
+                        },
+                        "scene": {
+                         "h": 16,
+                         "w": 0,
+                         "x": -30,
+                         "y": 170
+                        },
+                        "visible": false
+                       },
+                       {
+                        "class": "QQuickMouseArea",
+                        "enabled": true,
+                        "id": "q5f11142217e0",
+                        "scene": {
+                         "h": 104,
+                         "w": 576,
+                         "x": -606,
+                         "y": 126
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "KLLabel_QMLTYPE_7",
+                      "enabled": true,
+                      "id": "q5f111421de90",
+                      "scene": {
+                       "h": 104,
+                       "w": 576,
+                       "x": -606,
+                       "y": 126
+                      },
+                      "visible": false
+                     },
+                     {
+                      "children": [
+                       {
+                        "class": "QQuickText_QML_8",
+                        "enabled": true,
+                        "id": "q5f1114224b00",
+                        "scene": {
+                         "h": 29,
+                         "w": 0,
+                         "x": -318,
+                         "y": 126
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickImage",
+                          "enabled": true,
+                          "id": "q5f11142261e0",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 0,
+                           "w": 0,
+                           "x": -318,
+                           "y": 132
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickImage_QML_9",
+                        "enabled": true,
+                        "id": "q5f11142256c0",
+                        "props": {
+                         "source": "qrc:/link-external"
+                        },
+                        "scene": {
+                         "h": 16,
+                         "w": 0,
+                         "x": -318,
+                         "y": 132
+                        },
+                        "visible": false
+                       },
+                       {
+                        "class": "QQuickMouseArea",
+                        "enabled": true,
+                        "id": "q5f1114226820",
+                        "scene": {
+                         "h": 29,
+                         "w": 0,
+                         "x": -318,
+                         "y": 126
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "KLLabel_QMLTYPE_7",
+                      "enabled": true,
+                      "id": "q5f1114222d80",
+                      "scene": {
+                       "h": 29,
+                       "w": 0,
+                       "x": -318,
+                       "y": 126
+                      },
+                      "visible": false
+                     },
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f111422ae50",
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -334,
+                               "y": 244
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage",
+                            "enabled": true,
+                            "id": "q5f111422aab0",
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -334,
+                             "y": 244
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f111422b9a0",
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -334,
+                               "y": 244
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage",
+                            "enabled": true,
+                            "id": "q5f111422b590",
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -334,
+                             "y": 244
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f111422c4f0",
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -334,
+                               "y": 244
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage",
+                            "enabled": true,
+                            "id": "q5f111422c0b0",
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -334,
+                             "y": 244
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f111422d040",
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -334,
+                               "y": 244
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage",
+                            "enabled": true,
+                            "id": "q5f111422cc50",
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -334,
+                             "y": 244
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickItem",
+                          "enabled": true,
+                          "id": "q5f111422a740",
+                          "scene": {
+                           "h": 0,
+                           "w": 0,
+                           "x": -334,
+                           "y": 244
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickText_QML_8",
+                            "enabled": true,
+                            "id": "q5f111422fd50",
+                            "props": {
+                             "text": "View"
+                            },
+                            "scene": {
+                             "h": 27,
+                             "w": 32,
+                             "x": -334,
+                             "y": 245
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f11142314a0",
+                              "props": {
+                               "source": "qrc:/link-external"
+                              },
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -302,
+                               "y": 251
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage_QML_9",
+                            "enabled": true,
+                            "id": "q5f1114230980",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 16,
+                             "w": 0,
+                             "x": -302,
+                             "y": 251
+                            },
+                            "visible": false
+                           },
+                           {
+                            "class": "QQuickMouseArea",
+                            "enabled": true,
+                            "id": "q5f1114231ae0",
+                            "scene": {
+                             "h": 27,
+                             "w": 32,
+                             "x": -334,
+                             "y": 245
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "KLLabel_QMLTYPE_7_QML_12",
+                          "enabled": true,
+                          "id": "q5f111422dd30",
+                          "scene": {
+                           "h": 27,
+                           "w": 32,
+                           "x": -334,
+                           "y": 245
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickRowLayout_QML_11",
+                        "enabled": true,
+                        "id": "q5f111422a150",
+                        "scene": {
+                         "h": 28,
+                         "w": 32,
+                         "x": -334,
+                         "y": 244
+                        },
+                        "visible": false
+                       },
+                       {
+                        "class": "QQuickMouseArea",
+                        "enabled": true,
+                        "id": "q5f1114232d30",
+                        "scene": {
+                         "h": 32,
+                         "w": 160,
+                         "x": -398,
+                         "y": 242
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "KLButton_QMLTYPE_10",
+                      "enabled": true,
+                      "id": "q5f1114227840",
+                      "props": {
+                       "text": "View"
+                      },
+                      "scene": {
+                       "h": 32,
+                       "w": 160,
+                       "x": -398,
+                       "y": 242
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "QQuickColumn",
+                    "enabled": true,
+                    "id": "q5f111421dc20",
+                    "scene": {
+                     "h": 148,
+                     "w": 576,
+                     "x": -606,
+                     "y": 126
+                    },
+                    "visible": false
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": true,
+                    "id": "q5f11142344e0",
+                    "scene": {
+                     "h": 364,
+                     "w": 964,
+                     "x": -982,
+                     "y": 18
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "StatusIndicator_QMLTYPE_52",
+                  "enabled": true,
+                  "id": "q5f1114218ae0",
+                  "scene": {
+                   "h": 364,
+                   "w": 964,
+                   "x": -982,
+                   "y": 18
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "acc": {
+                         "actions": [],
+                         "name": "",
+                         "rect": {
+                          "h": 0,
+                          "w": 0,
+                          "x": 0,
+                          "y": 0
+                         },
+                         "role": 19,
+                         "states": [
+                          "invisible",
+                          "offscreen"
+                         ]
+                        },
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f111423de30",
+                              "props": {
+                               "source": "qrc:/protection-rest"
+                              },
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -968,
+                               "y": 416
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage_QML_58",
+                            "enabled": true,
+                            "id": "q5f111423da30",
+                            "props": {
+                             "source": "qrc:/protection-rest"
+                            },
+                            "scene": {
+                             "h": 17,
+                             "w": 16,
+                             "x": -968,
+                             "y": 416
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickText_QML_8",
+                              "enabled": true,
+                              "id": "q5f11142408c0",
+                              "props": {
+                               "text": "Scan"
+                              },
+                              "scene": {
+                               "h": 29,
+                               "w": 37,
+                               "x": -944,
+                               "y": 411
+                              },
+                              "visible": false
+                             },
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickImage",
+                                "enabled": true,
+                                "id": "q5f11142420d0",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 0,
+                                 "w": 0,
+                                 "x": -907,
+                                 "y": 417
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "QQuickImage_QML_9",
+                              "enabled": true,
+                              "id": "q5f11142414f0",
+                              "props": {
+                               "source": "qrc:/link-external"
+                              },
+                              "scene": {
+                               "h": 16,
+                               "w": 0,
+                               "x": -907,
+                               "y": 417
+                              },
+                              "visible": false
+                             },
+                             {
+                              "class": "QQuickMouseArea",
+                              "enabled": true,
+                              "id": "q5f1114242710",
+                              "scene": {
+                               "h": 29,
+                               "w": 37,
+                               "x": -944,
+                               "y": 411
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "KLLabel_QMLTYPE_7",
+                            "enabled": true,
+                            "id": "q5f111423e8a0",
+                            "scene": {
+                             "h": 29,
+                             "w": 37,
+                             "x": -944,
+                             "y": 411
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickText_QML_8",
+                                "enabled": true,
+                                "id": "q5f1114245750",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -968,
+                                 "y": 446
+                                },
+                                "visible": false
+                               },
+                               {
+                                "children": [
+                                 {
+                                  "class": "QQuickImage",
+                                  "enabled": true,
+                                  "id": "q5f1114246e30",
+                                  "props": {
+                                   "source": "qrc:/link-external"
+                                  },
+                                  "scene": {
+                                   "h": 0,
+                                   "w": 0,
+                                   "x": -524,
+                                   "y": 450
+                                  },
+                                  "visible": false
+                                 }
+                                ],
+                                "class": "QQuickImage_QML_9",
+                                "enabled": true,
+                                "id": "q5f1114246310",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 16,
+                                 "w": 0,
+                                 "x": -524,
+                                 "y": 450
+                                },
+                                "visible": false
+                               },
+                               {
+                                "class": "QQuickMouseArea",
+                                "enabled": true,
+                                "id": "q5f1114247470",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -968,
+                                 "y": 446
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "KLLabel_QMLTYPE_7",
+                              "enabled": true,
+                              "id": "q5f1114243a70",
+                              "scene": {
+                               "h": 24,
+                               "w": 444,
+                               "x": -968,
+                               "y": 446
+                              },
+                              "visible": false
+                             },
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickText_QML_8",
+                                "enabled": true,
+                                "id": "q5f111424a020",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -968,
+                                 "y": 470
+                                },
+                                "visible": false
+                               },
+                               {
+                                "children": [
+                                 {
+                                  "class": "QQuickImage",
+                                  "enabled": true,
+                                  "id": "q5f111424b770",
+                                  "props": {
+                                   "source": "qrc:/link-external"
+                                  },
+                                  "scene": {
+                                   "h": 0,
+                                   "w": 0,
+                                   "x": -524,
+                                   "y": 474
+                                  },
+                                  "visible": false
+                                 }
+                                ],
+                                "class": "QQuickImage_QML_9",
+                                "enabled": true,
+                                "id": "q5f111424ac50",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 16,
+                                 "w": 0,
+                                 "x": -524,
+                                 "y": 474
+                                },
+                                "visible": false
+                               },
+                               {
+                                "class": "QQuickMouseArea",
+                                "enabled": true,
+                                "id": "q5f111424bdb0",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -968,
+                                 "y": 470
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "KLLabel_QMLTYPE_7",
+                              "enabled": true,
+                              "id": "q5f11142482e0",
+                              "scene": {
+                               "h": 24,
+                               "w": 444,
+                               "x": -968,
+                               "y": 470
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickColumn",
+                            "enabled": true,
+                            "id": "q5f11142438b0",
+                            "scene": {
+                             "h": 48,
+                             "w": 444,
+                             "x": -968,
+                             "y": 446
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickItem",
+                          "enabled": true,
+                          "id": "q5f111423d7b0",
+                          "scene": {
+                           "h": 118,
+                           "w": 476,
+                           "x": -984,
+                           "y": 398
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickRectangle",
+                          "enabled": true,
+                          "id": "q5f11142bde50",
+                          "scene": {
+                           "h": 118,
+                           "w": 476,
+                           "x": -984,
+                           "y": 398
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickFrame",
+                        "enabled": true,
+                        "id": "q5f111423cfe0",
+                        "scene": {
+                         "h": 118,
+                         "w": 476,
+                         "x": -984,
+                         "y": 398
+                        },
+                        "visible": false
+                       },
+                       {
+                        "class": "QQuickMouseArea",
+                        "enabled": true,
+                        "id": "q5f111424d650",
+                        "scene": {
+                         "h": 118,
+                         "w": 476,
+                         "x": -984,
+                         "y": 398
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRectangle",
+                      "enabled": true,
+                      "id": "q5f111423a990",
+                      "scene": {
+                       "h": 118,
+                       "w": 476,
+                       "x": -984,
+                       "y": 398
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLInfoTab_QMLTYPE_57",
+                    "enabled": true,
+                    "id": "q5f111423a3b0",
+                    "props": {
+                     "title": "Scan"
+                    },
+                    "scene": {
+                     "h": 118,
+                     "w": 476,
+                     "x": -984,
+                     "y": 398
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "acc": {
+                         "actions": [],
+                         "name": "",
+                         "rect": {
+                          "h": 0,
+                          "w": 0,
+                          "x": 0,
+                          "y": 0
+                         },
+                         "role": 19,
+                         "states": [
+                          "invisible",
+                          "offscreen"
+                         ]
+                        },
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickImage",
+                              "enabled": true,
+                              "id": "q5f1114251f80",
+                              "props": {
+                               "source": "qrc:/update-rest"
+                              },
+                              "scene": {
+                               "h": 0,
+                               "w": 0,
+                               "x": -476,
+                               "y": 416
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickImage_QML_58",
+                            "enabled": true,
+                            "id": "q5f1114251b80",
+                            "props": {
+                             "source": "qrc:/update-rest"
+                            },
+                            "scene": {
+                             "h": 17,
+                             "w": 16,
+                             "x": -476,
+                             "y": 416
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "class": "QQuickText_QML_8",
+                              "enabled": true,
+                              "id": "q5f11142546f0",
+                              "props": {
+                               "text": "Update"
+                              },
+                              "scene": {
+                               "h": 29,
+                               "w": 56,
+                               "x": -452,
+                               "y": 411
+                              },
+                              "visible": false
+                             },
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickImage",
+                                "enabled": true,
+                                "id": "q5f1114255e40",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 0,
+                                 "w": 0,
+                                 "x": -396,
+                                 "y": 417
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "QQuickImage_QML_9",
+                              "enabled": true,
+                              "id": "q5f1114255320",
+                              "props": {
+                               "source": "qrc:/link-external"
+                              },
+                              "scene": {
+                               "h": 16,
+                               "w": 0,
+                               "x": -396,
+                               "y": 417
+                              },
+                              "visible": false
+                             },
+                             {
+                              "class": "QQuickMouseArea",
+                              "enabled": true,
+                              "id": "q5f1114256480",
+                              "scene": {
+                               "h": 29,
+                               "w": 56,
+                               "x": -452,
+                               "y": 411
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "KLLabel_QMLTYPE_7",
+                            "enabled": true,
+                            "id": "q5f11142529f0",
+                            "scene": {
+                             "h": 29,
+                             "w": 56,
+                             "x": -452,
+                             "y": 411
+                            },
+                            "visible": false
+                           },
+                           {
+                            "children": [
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickText_QML_8",
+                                "enabled": true,
+                                "id": "q5f1114259630",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -476,
+                                 "y": 446
+                                },
+                                "visible": false
+                               },
+                               {
+                                "children": [
+                                 {
+                                  "class": "QQuickImage",
+                                  "enabled": true,
+                                  "id": "q5f111425ad10",
+                                  "props": {
+                                   "source": "qrc:/link-external"
+                                  },
+                                  "scene": {
+                                   "h": 0,
+                                   "w": 0,
+                                   "x": -32,
+                                   "y": 450
+                                  },
+                                  "visible": false
+                                 }
+                                ],
+                                "class": "QQuickImage_QML_9",
+                                "enabled": true,
+                                "id": "q5f111425a1f0",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 16,
+                                 "w": 0,
+                                 "x": -32,
+                                 "y": 450
+                                },
+                                "visible": false
+                               },
+                               {
+                                "class": "QQuickMouseArea",
+                                "enabled": true,
+                                "id": "q5f111425b350",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -476,
+                                 "y": 446
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "KLLabel_QMLTYPE_7",
+                              "enabled": true,
+                              "id": "q5f1114257950",
+                              "scene": {
+                               "h": 24,
+                               "w": 444,
+                               "x": -476,
+                               "y": 446
+                              },
+                              "visible": false
+                             },
+                             {
+                              "children": [
+                               {
+                                "class": "QQuickText_QML_8",
+                                "enabled": true,
+                                "id": "q5f111425df00",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -476,
+                                 "y": 470
+                                },
+                                "visible": false
+                               },
+                               {
+                                "children": [
+                                 {
+                                  "class": "QQuickImage",
+                                  "enabled": true,
+                                  "id": "q5f111425f650",
+                                  "props": {
+                                   "source": "qrc:/link-external"
+                                  },
+                                  "scene": {
+                                   "h": 0,
+                                   "w": 0,
+                                   "x": -32,
+                                   "y": 474
+                                  },
+                                  "visible": false
+                                 }
+                                ],
+                                "class": "QQuickImage_QML_9",
+                                "enabled": true,
+                                "id": "q5f111425eb30",
+                                "props": {
+                                 "source": "qrc:/link-external"
+                                },
+                                "scene": {
+                                 "h": 16,
+                                 "w": 0,
+                                 "x": -32,
+                                 "y": 474
+                                },
+                                "visible": false
+                               },
+                               {
+                                "class": "QQuickMouseArea",
+                                "enabled": true,
+                                "id": "q5f111425fc90",
+                                "scene": {
+                                 "h": 24,
+                                 "w": 444,
+                                 "x": -476,
+                                 "y": 470
+                                },
+                                "visible": false
+                               }
+                              ],
+                              "class": "KLLabel_QMLTYPE_7",
+                              "enabled": true,
+                              "id": "q5f111425c1c0",
+                              "scene": {
+                               "h": 24,
+                               "w": 444,
+                               "x": -476,
+                               "y": 470
+                              },
+                              "visible": false
+                             }
+                            ],
+                            "class": "QQuickColumn",
+                            "enabled": true,
+                            "id": "q5f1114257620",
+                            "scene": {
+                             "h": 48,
+                             "w": 444,
+                             "x": -476,
+                             "y": 446
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickItem",
+                          "enabled": true,
+                          "id": "q5f111424b670",
+                          "scene": {
+                           "h": 118,
+                           "w": 476,
+                           "x": -492,
+                           "y": 398
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickRectangle",
+                          "enabled": true,
+                          "id": "q5f11142bb3c0",
+                          "scene": {
+                           "h": 118,
+                           "w": 476,
+                           "x": -492,
+                           "y": 398
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickFrame",
+                        "enabled": true,
+                        "id": "q5f1114251310",
+                        "scene": {
+                         "h": 118,
+                         "w": 476,
+                         "x": -492,
+                         "y": 398
+                        },
+                        "visible": false
+                       },
+                       {
+                        "class": "QQuickMouseArea",
+                        "enabled": true,
+                        "id": "q5f11142610a0",
+                        "scene": {
+                         "h": 118,
+                         "w": 476,
+                         "x": -492,
+                         "y": 398
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRectangle",
+                      "enabled": true,
+                      "id": "q5f11142502f0",
+                      "scene": {
+                       "h": 118,
+                       "w": 476,
+                       "x": -492,
+                       "y": 398
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLInfoTab_QMLTYPE_57",
+                    "enabled": true,
+                    "id": "q5f111424f090",
+                    "props": {
+                     "title": "Update"
+                    },
+                    "scene": {
+                     "h": 118,
+                     "w": 476,
+                     "x": -492,
+                     "y": 398
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickRowLayout",
+                  "enabled": true,
+                  "id": "q5f1114230f20",
+                  "scene": {
+                   "h": 118,
+                   "w": 968,
+                   "x": -984,
+                   "y": 398
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114266830",
+                            "props": {
+                             "source": "qrc:/reports-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -929,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114266490",
+                          "props": {
+                           "source": "qrc:/reports-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -929,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114267380",
+                            "props": {
+                             "source": "qrc:/reports-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -929,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114266f70",
+                          "props": {
+                           "source": "qrc:/reports-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -929,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114267ed0",
+                            "props": {
+                             "source": "qrc:/reports-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -929,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114267a90",
+                          "props": {
+                           "source": "qrc:/reports-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -929,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114268a20",
+                            "props": {
+                             "source": "qrc:/reports-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -929,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114268630",
+                          "props": {
+                           "source": "qrc:/reports-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -929,
+                           "y": 540
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickItem",
+                        "enabled": false,
+                        "id": "q5f1114266120",
+                        "scene": {
+                         "h": 0,
+                         "w": 16,
+                         "x": -929,
+                         "y": 548
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickText_QML_8",
+                          "enabled": false,
+                          "id": "q5f111426b730",
+                          "props": {
+                           "text": "Reports"
+                          },
+                          "scene": {
+                           "h": 27,
+                           "w": 51,
+                           "x": -909,
+                           "y": 535
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111426ce80",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -858,
+                             "y": 541
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage_QML_9",
+                          "enabled": false,
+                          "id": "q5f111426c360",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 0,
+                           "x": -858,
+                           "y": 541
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickMouseArea",
+                          "enabled": false,
+                          "id": "q5f111426d4c0",
+                          "scene": {
+                           "h": 27,
+                           "w": 51,
+                           "x": -909,
+                           "y": 535
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "KLLabel_QMLTYPE_7_QML_12",
+                        "enabled": false,
+                        "id": "q5f1114269710",
+                        "scene": {
+                         "h": 27,
+                         "w": 51,
+                         "x": -909,
+                         "y": 535
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRowLayout_QML_11",
+                      "enabled": false,
+                      "id": "q5f1114265b30",
+                      "scene": {
+                       "h": 28,
+                       "w": 71,
+                       "x": -929,
+                       "y": 534
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickMouseArea",
+                      "enabled": false,
+                      "id": "q5f111426e710",
+                      "scene": {
+                       "h": 32,
+                       "w": 181,
+                       "x": -984,
+                       "y": 532
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLButton_QMLTYPE_10",
+                    "enabled": false,
+                    "id": "q5f1114262f60",
+                    "props": {
+                     "text": "Reports"
+                    },
+                    "scene": {
+                     "h": 32,
+                     "w": 181,
+                     "x": -984,
+                     "y": 532
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114273040",
+                            "props": {
+                             "source": "qrc:/storage-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -731,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114272ca0",
+                          "props": {
+                           "source": "qrc:/storage-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -731,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114273b90",
+                            "props": {
+                             "source": "qrc:/storage-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -731,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114273780",
+                          "props": {
+                           "source": "qrc:/storage-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -731,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f11142746e0",
+                            "props": {
+                             "source": "qrc:/storage-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -731,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f11142742a0",
+                          "props": {
+                           "source": "qrc:/storage-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -731,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114275230",
+                            "props": {
+                             "source": "qrc:/storage-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -731,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114274e40",
+                          "props": {
+                           "source": "qrc:/storage-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -731,
+                           "y": 540
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickItem",
+                        "enabled": false,
+                        "id": "q5f1114272930",
+                        "scene": {
+                         "h": 0,
+                         "w": 16,
+                         "x": -731,
+                         "y": 548
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickText_QML_8",
+                          "enabled": false,
+                          "id": "q5f1114277f40",
+                          "props": {
+                           "text": "Backup"
+                          },
+                          "scene": {
+                           "h": 27,
+                           "w": 49,
+                           "x": -711,
+                           "y": 535
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f11142796f0",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -662,
+                             "y": 541
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage_QML_9",
+                          "enabled": false,
+                          "id": "q5f1114278b70",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 0,
+                           "x": -662,
+                           "y": 541
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickMouseArea",
+                          "enabled": false,
+                          "id": "q5f1114279d30",
+                          "scene": {
+                           "h": 27,
+                           "w": 49,
+                           "x": -711,
+                           "y": 535
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "KLLabel_QMLTYPE_7_QML_12",
+                        "enabled": false,
+                        "id": "q5f1114275f20",
+                        "scene": {
+                         "h": 27,
+                         "w": 49,
+                         "x": -711,
+                         "y": 535
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRowLayout_QML_11",
+                      "enabled": false,
+                      "id": "q5f1114272340",
+                      "scene": {
+                       "h": 28,
+                       "w": 69,
+                       "x": -731,
+                       "y": 534
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickMouseArea",
+                      "enabled": false,
+                      "id": "q5f111427b1b0",
+                      "scene": {
+                       "h": 32,
+                       "w": 181,
+                       "x": -787,
+                       "y": 532
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLButton_QMLTYPE_10",
+                    "enabled": false,
+                    "id": "q5f111426f880",
+                    "props": {
+                     "text": "Backup"
+                    },
+                    "scene": {
+                     "h": 32,
+                     "w": 181,
+                     "x": -787,
+                     "y": 532
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111427fcb0",
+                            "props": {
+                             "source": "qrc:/settings-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -537,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111427f910",
+                          "props": {
+                           "source": "qrc:/settings-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -537,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114280800",
+                            "props": {
+                             "source": "qrc:/settings-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -537,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f11142803f0",
+                          "props": {
+                           "source": "qrc:/settings-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -537,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114281350",
+                            "props": {
+                             "source": "qrc:/settings-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -537,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114280f10",
+                          "props": {
+                           "source": "qrc:/settings-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -537,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114281ea0",
+                            "props": {
+                             "source": "qrc:/settings-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -537,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114281ab0",
+                          "props": {
+                           "source": "qrc:/settings-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -537,
+                           "y": 540
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickItem",
+                        "enabled": false,
+                        "id": "q5f111427f5a0",
+                        "scene": {
+                         "h": 0,
+                         "w": 16,
+                         "x": -537,
+                         "y": 548
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickText_QML_8",
+                          "enabled": false,
+                          "id": "q5f1114284bb0",
+                          "props": {
+                           "text": "Settings"
+                          },
+                          "scene": {
+                           "h": 27,
+                           "w": 53,
+                           "x": -517,
+                           "y": 535
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114286360",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -464,
+                             "y": 541
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage_QML_9",
+                          "enabled": false,
+                          "id": "q5f11142857e0",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 0,
+                           "x": -464,
+                           "y": 541
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickMouseArea",
+                          "enabled": false,
+                          "id": "q5f11142869a0",
+                          "scene": {
+                           "h": 27,
+                           "w": 53,
+                           "x": -517,
+                           "y": 535
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "KLLabel_QMLTYPE_7_QML_12",
+                        "enabled": false,
+                        "id": "q5f1114282b90",
+                        "scene": {
+                         "h": 27,
+                         "w": 53,
+                         "x": -517,
+                         "y": 535
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRowLayout_QML_11",
+                      "enabled": false,
+                      "id": "q5f111427efb0",
+                      "scene": {
+                       "h": 28,
+                       "w": 73,
+                       "x": -537,
+                       "y": 534
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickMouseArea",
+                      "enabled": false,
+                      "id": "q5f1114287e20",
+                      "scene": {
+                       "h": 32,
+                       "w": 180,
+                       "x": -590,
+                       "y": 532
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLButton_QMLTYPE_10",
+                    "enabled": false,
+                    "id": "q5f111427c4f0",
+                    "props": {
+                     "text": "Settings"
+                    },
+                    "scene": {
+                     "h": 32,
+                     "w": 180,
+                     "x": -590,
+                     "y": 532
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111428c980",
+                            "props": {
+                             "source": "qrc:/lock-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -372,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111428c5e0",
+                          "props": {
+                           "source": "qrc:/lock-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -372,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111428d4d0",
+                            "props": {
+                             "source": "qrc:/lock-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -372,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111428d0c0",
+                          "props": {
+                           "source": "qrc:/lock-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -372,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111428e020",
+                            "props": {
+                             "source": "qrc:/lock-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -372,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111428dbe0",
+                          "props": {
+                           "source": "qrc:/lock-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -372,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111428eb70",
+                            "props": {
+                             "source": "qrc:/lock-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -372,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111428e780",
+                          "props": {
+                           "source": "qrc:/lock-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -372,
+                           "y": 540
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickItem",
+                        "enabled": false,
+                        "id": "q5f111428c270",
+                        "scene": {
+                         "h": 0,
+                         "w": 16,
+                         "x": -372,
+                         "y": 548
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickText_QML_8",
+                          "enabled": false,
+                          "id": "q5f1114291880",
+                          "props": {
+                           "text": "Temporary access"
+                          },
+                          "scene": {
+                           "h": 27,
+                           "w": 117,
+                           "x": -352,
+                           "y": 535
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f1114293030",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -235,
+                             "y": 541
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage_QML_9",
+                          "enabled": false,
+                          "id": "q5f11142924b0",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 0,
+                           "x": -235,
+                           "y": 541
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickMouseArea",
+                          "enabled": false,
+                          "id": "q5f1114293670",
+                          "scene": {
+                           "h": 27,
+                           "w": 117,
+                           "x": -352,
+                           "y": 535
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "KLLabel_QMLTYPE_7_QML_12",
+                        "enabled": false,
+                        "id": "q5f111428f860",
+                        "scene": {
+                         "h": 27,
+                         "w": 117,
+                         "x": -352,
+                         "y": 535
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRowLayout_QML_11",
+                      "enabled": false,
+                      "id": "q5f111428bc80",
+                      "scene": {
+                       "h": 28,
+                       "w": 137,
+                       "x": -372,
+                       "y": 534
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickMouseArea",
+                      "enabled": false,
+                      "id": "q5f1114294af0",
+                      "scene": {
+                       "h": 32,
+                       "w": 181,
+                       "x": -394,
+                       "y": 532
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLButton_QMLTYPE_10",
+                    "enabled": false,
+                    "id": "q5f1114289180",
+                    "props": {
+                     "text": "Temporary access"
+                    },
+                    "scene": {
+                     "h": 32,
+                     "w": 181,
+                     "x": -394,
+                     "y": 532
+                    },
+                    "visible": false
+                   },
+                   {
+                    "children": [
+                     {
+                      "children": [
+                       {
+                        "children": [
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f11142996b0",
+                            "props": {
+                             "source": "qrc:/support-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -144,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114299310",
+                          "props": {
+                           "source": "qrc:/support-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -144,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111429a200",
+                            "props": {
+                             "source": "qrc:/support-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -144,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f1114299df0",
+                          "props": {
+                           "source": "qrc:/support-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -144,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111429ad50",
+                            "props": {
+                             "source": "qrc:/support-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -144,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111429a910",
+                          "props": {
+                           "source": "qrc:/support-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -144,
+                           "y": 540
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111429b8a0",
+                            "props": {
+                             "source": "qrc:/support-normal"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -144,
+                             "y": 540
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage",
+                          "enabled": false,
+                          "id": "q5f111429b4b0",
+                          "props": {
+                           "source": "qrc:/support-normal"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 16,
+                           "x": -144,
+                           "y": 540
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "QQuickItem",
+                        "enabled": false,
+                        "id": "q5f1114298fa0",
+                        "scene": {
+                         "h": 0,
+                         "w": 16,
+                         "x": -144,
+                         "y": 548
+                        },
+                        "visible": false
+                       },
+                       {
+                        "children": [
+                         {
+                          "class": "QQuickText_QML_8",
+                          "enabled": false,
+                          "id": "q5f111429e5b0",
+                          "props": {
+                           "text": "Support"
+                          },
+                          "scene": {
+                           "h": 27,
+                           "w": 55,
+                           "x": -124,
+                           "y": 535
+                          },
+                          "visible": false
+                         },
+                         {
+                          "children": [
+                           {
+                            "class": "QQuickImage",
+                            "enabled": false,
+                            "id": "q5f111429fd60",
+                            "props": {
+                             "source": "qrc:/link-external"
+                            },
+                            "scene": {
+                             "h": 0,
+                             "w": 0,
+                             "x": -69,
+                             "y": 541
+                            },
+                            "visible": false
+                           }
+                          ],
+                          "class": "QQuickImage_QML_9",
+                          "enabled": false,
+                          "id": "q5f111429f1e0",
+                          "props": {
+                           "source": "qrc:/link-external"
+                          },
+                          "scene": {
+                           "h": 16,
+                           "w": 0,
+                           "x": -69,
+                           "y": 541
+                          },
+                          "visible": false
+                         },
+                         {
+                          "class": "QQuickMouseArea",
+                          "enabled": false,
+                          "id": "q5f11142a03a0",
+                          "scene": {
+                           "h": 27,
+                           "w": 55,
+                           "x": -124,
+                           "y": 535
+                          },
+                          "visible": false
+                         }
+                        ],
+                        "class": "KLLabel_QMLTYPE_7_QML_12",
+                        "enabled": false,
+                        "id": "q5f111429c590",
+                        "scene": {
+                         "h": 27,
+                         "w": 55,
+                         "x": -124,
+                         "y": 535
+                        },
+                        "visible": false
+                       }
+                      ],
+                      "class": "QQuickRowLayout_QML_11",
+                      "enabled": false,
+                      "id": "q5f11142989b0",
+                      "scene": {
+                       "h": 28,
+                       "w": 75,
+                       "x": -144,
+                       "y": 534
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickMouseArea",
+                      "enabled": false,
+                      "id": "q5f11142a1820",
+                      "scene": {
+                       "h": 32,
+                       "w": 181,
+                       "x": -197,
+                       "y": 532
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "KLButton_QMLTYPE_10",
+                    "enabled": false,
+                    "id": "q5f1114295f30",
+                    "props": {
+                     "text": "Support"
+                    },
+                    "scene": {
+                     "h": 32,
+                     "w": 181,
+                     "x": -197,
+                     "y": 532
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickRowLayout",
+                  "enabled": true,
+                  "id": "q5f111425f0d0",
+                  "scene": {
+                   "h": 32,
+                   "w": 968,
+                   "x": -984,
+                   "y": 532
+                  },
+                  "visible": false
+                 }
+                ],
+                "class": "QQuickColumnLayout",
+                "enabled": true,
+                "id": "q5f111420f510",
+                "scene": {
+                 "h": 580,
+                 "w": 1000,
+                 "x": -1000,
+                 "y": 0
+                },
+                "visible": false
+               }
+              ],
+              "class": "QQuickItem",
+              "enabled": true,
+              "id": "q5f11142126a0",
+              "scene": {
+               "h": 580,
+               "w": 1000,
+               "x": -1000,
+               "y": 0
+              },
+              "visible": false
+             },
+             {
+              "class": "QQuickRectangle",
+              "enabled": true,
+              "id": "q5f11142c0a50",
+              "scene": {
+               "h": 580,
+               "w": 1000,
+               "x": -1000,
+               "y": 0
+              },
+              "visible": false
+             }
+            ],
+            "class": "NoConnection_QMLTYPE_59",
+            "enabled": true,
+            "id": "q5f1114204450",
+            "scene": {
+             "h": 580,
+             "w": 1000,
+             "x": -1000,
+             "y": 0
+            },
+            "visible": false
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickRectangle",
+                    "enabled": true,
+                    "id": "q5f111439eaa0",
+                    "scene": {
+                     "h": 32,
+                     "w": 48,
+                     "x": 0,
+                     "y": 6
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage_QML_66",
+                      "enabled": true,
+                      "id": "q5f111439f2a0",
+                      "props": {
+                       "source": "qrc:/back-dark-normal"
+                      },
+                      "scene": {
+                       "h": 32,
+                       "w": 48,
+                       "x": 0,
+                       "y": 6
+                      },
+                      "visible": true
+                     },
+                     {
+                      "class": "QQuickImage_QML_67",
+                      "enabled": true,
+                      "id": "q5f11143c46d0",
+                      "props": {
+                       "source": "qrc:/back-dark-hover"
+                      },
+                      "scene": {
+                       "h": 32,
+                       "w": 48,
+                       "x": 0,
+                       "y": 6
+                      },
+                      "visible": true
+                     },
+                     {
+                      "class": "QQuickImage_QML_68",
+                      "enabled": true,
+                      "id": "q5f11143c4ec0",
+                      "props": {
+                       "source": "qrc:/back-dark-pressed"
+                      },
+                      "scene": {
+                       "h": 32,
+                       "w": 48,
+                       "x": 0,
+                       "y": 6
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickItem",
+                    "enabled": true,
+                    "id": "q5f111439f1e0",
+                    "scene": {
+                     "h": 32,
+                     "w": 48,
+                     "x": 0,
+                     "y": 6
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickButton_QML_65",
+                  "enabled": true,
+                  "id": "q5f11143b6140",
+                  "props": {
+                   "checked": "false"
+                  },
+                  "scene": {
+                   "h": 32,
+                   "w": 48,
+                   "x": 0,
+                   "y": 6
+                  },
+                  "visible": true
+                 },
+                 {
+                  "class": "QQuickMouseArea",
+                  "enabled": true,
+                  "id": "q5f11143b0880",
+                  "scene": {
+                   "h": 32,
+                   "w": 48,
+                   "x": 0,
+                   "y": 6
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": true,
+                    "id": "q5f11143a5d70",
+                    "props": {
+                     "text": "Protection Center"
+                    },
+                    "scene": {
+                     "h": 29,
+                     "w": 135,
+                     "x": 56,
+                     "y": 9
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": true,
+                      "id": "q5f11143bd870",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 191,
+                       "y": 15
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": true,
+                    "id": "q5f11143bce30",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": 191,
+                     "y": 15
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": true,
+                    "id": "q5f11143b8550",
+                    "scene": {
+                     "h": 29,
+                     "w": 135,
+                     "x": 56,
+                     "y": 9
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7",
+                  "enabled": true,
+                  "id": "q5f11143b0bc0",
+                  "scene": {
+                   "h": 29,
+                   "w": 135,
+                   "x": 56,
+                   "y": 9
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": true,
+                    "id": "q5f11143b6fd0",
+                    "props": {
+                     "text": "Help"
+                    },
+                    "scene": {
+                     "h": 26,
+                     "w": 31,
+                     "x": 953,
+                     "y": 9
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": true,
+                      "id": "q5f11143c2f70",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 984,
+                       "y": 14
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": true,
+                    "id": "q5f11143b77f0",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": 984,
+                     "y": 14
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": true,
+                    "id": "q5f11143c3590",
+                    "scene": {
+                     "h": 26,
+                     "w": 31,
+                     "x": 953,
+                     "y": 9
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7",
+                  "enabled": true,
+                  "id": "q5f11143b9350",
+                  "scene": {
+                   "h": 26,
+                   "w": 31,
+                   "x": 953,
+                   "y": 9
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickItem",
+                "enabled": true,
+                "id": "q5f11143b5f70",
+                "scene": {
+                 "h": 44,
+                 "w": 1000,
+                 "x": 0,
+                 "y": 0
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickRectangle",
+                "enabled": true,
+                "id": "q5f111432b820",
+                "scene": {
+                 "h": 44,
+                 "w": 1000,
+                 "x": 0,
+                 "y": 0
+                },
+                "visible": true
+               }
+              ],
+              "class": "KLPageHeader_QMLTYPE_64",
+              "enabled": true,
+              "id": "q5f11143b48c0",
+              "props": {
+               "title": "Protection Center"
+              },
+              "scene": {
+               "h": 44,
+               "w": 1000,
+               "x": 0,
+               "y": 0
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f111433b8e0",
+                    "props": {
+                     "source": "qrc:/status-critical"
+                    },
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 440,
+                     "y": 193
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage_QML_71",
+                  "enabled": true,
+                  "id": "q5f111433b520",
+                  "props": {
+                   "source": "qrc:/status-critical"
+                  },
+                  "scene": {
+                   "h": 140,
+                   "w": 120,
+                   "x": 440,
+                   "y": 193
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": true,
+                    "id": "q5f11143c5860",
+                    "props": {
+                     "text": "Application stopped"
+                    },
+                    "scene": {
+                     "h": 33,
+                     "w": 169,
+                     "x": 415,
+                     "y": 357
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": true,
+                      "id": "q5f11143c6cd0",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 584,
+                       "y": 366
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": true,
+                    "id": "q5f11143c61c0",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": 584,
+                     "y": 366
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": true,
+                    "id": "q5f11143c72f0",
+                    "scene": {
+                     "h": 33,
+                     "w": 169,
+                     "x": 415,
+                     "y": 357
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7",
+                  "enabled": true,
+                  "id": "q5f11143aeb30",
+                  "scene": {
+                   "h": 33,
+                   "w": 169,
+                   "x": 415,
+                   "y": 357
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickColumnLayout",
+                "enabled": true,
+                "id": "q5f11143b7d60",
+                "scene": {
+                 "h": 197,
+                 "w": 169,
+                 "x": 415,
+                 "y": 193
+                },
+                "visible": true
+               },
+               {
+                "children": [
+                 {
+                  "class": "QQuickItem",
+                  "enabled": true,
+                  "id": "q5f11143c9410",
+                  "scene": {
+                   "h": 0,
+                   "w": 1000,
+                   "x": 0,
+                   "y": 44
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickRectangle",
+                      "enabled": true,
+                      "id": "q5f1114327140",
+                      "scene": {
+                       "h": 536,
+                       "w": 1,
+                       "x": 998,
+                       "y": 44
+                      },
+                      "visible": false
+                     },
+                     {
+                      "class": "QQuickRectangle",
+                      "enabled": true,
+                      "id": "q5f1114327910",
+                      "scene": {
+                       "h": 1,
+                       "w": 12,
+                       "x": 988,
+                       "y": 578
+                      },
+                      "visible": false
+                     }
+                    ],
+                    "class": "QQuickItem",
+                    "enabled": true,
+                    "id": "q5f1114326f40",
+                    "scene": {
+                     "h": 536,
+                     "w": 12,
+                     "x": 988,
+                     "y": 44
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickRectangle",
+                    "enabled": true,
+                    "id": "q5f1114328510",
+                    "scene": {
+                     "h": 534,
+                     "w": 8,
+                     "x": 990,
+                     "y": 46
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "KLScrollBar_QMLTYPE_6",
+                  "enabled": true,
+                  "id": "q5f1114326d60",
+                  "scene": {
+                   "h": 536,
+                   "w": 12,
+                   "x": 988,
+                   "y": 44
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "KLScrollableListView_QMLTYPE_63",
+                "enabled": true,
+                "id": "q5f1114324010",
+                "props": {
+                 "currentIndex": "-1"
+                },
+                "scene": {
+                 "h": 536,
+                 "w": 1000,
+                 "x": 0,
+                 "y": 44
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickItem",
+              "enabled": true,
+              "id": "q5f11143bb910",
+              "scene": {
+               "h": 536,
+               "w": 1000,
+               "x": 0,
+               "y": 44
+              },
+              "visible": true
+             },
+             {
+              "class": "QQuickRectangle",
+              "enabled": true,
+              "id": "q5f11143eb880",
+              "scene": {
+               "h": 580,
+               "w": 1000,
+               "x": 0,
+               "y": 0
+              },
+              "visible": true
+             }
+            ],
+            "class": "ProtectionState_QMLTYPE_69",
+            "enabled": true,
+            "id": "q5f11143bf0f0",
+            "scene": {
+             "h": 580,
+             "w": 1000,
+             "x": 0,
+             "y": 0
+            },
+            "visible": true
+           }
+          ],
+          "class": "QQuickStackView_QML_42",
+          "enabled": true,
+          "id": "q5f1113bd81e0",
+          "scene": {
+           "h": 580,
+           "w": 1000,
+           "x": 0,
+           "y": 0
+          },
+          "visible": true
+         }
+        ],
+        "class": "QQuickItem_QML_41",
+        "enabled": true,
+        "id": "q5f1113bd71f0",
+        "scene": {
+         "h": 580,
+         "w": 1000,
+         "x": 0,
+         "y": 0
+        },
+        "visible": true
+       }
+      ],
+      "class": "QQuickItem",
+      "enabled": true,
+      "id": "q5f1113bd6200",
+      "scene": {
+       "h": 580,
+       "w": 1000,
+       "x": 0,
+       "y": 0
+      },
+      "visible": true
+     },
+     {
+      "class": "QQuickOverlay",
+      "enabled": true,
+      "id": "q5f1113bd5f70",
+      "scene": {
+       "h": 580,
+       "w": 1000,
+       "x": 0,
+       "y": 0
+      },
+      "visible": false
+     },
+     {
+      "class": "QQuickRectangle_QML_40",
+      "enabled": true,
+      "id": "q5f1113f52620",
+      "scene": {
+       "h": 580,
+       "w": 1000,
+       "x": 0,
+       "y": 0
+      },
+      "visible": true
+     }
+    ],
+    "class": "QQuickRootItem",
+    "enabled": true,
+    "id": "q5f1113bd4ba0",
+    "scene": {
+     "h": 580,
+     "w": 1000,
+     "x": 0,
+     "y": 0
+    },
+    "visible": true
+   },
+   "title": "Kaspersky Endpoint Security 12.5 for Linux",
+   "visible": true
+  },
+  {
+   "class": "KLConfirmationDialog_QMLTYPE_13_QML_30",
+   "geometry": {
+    "h": 300,
+    "w": 500,
+    "x": 0,
+    "y": 0
+   },
+   "id": "q5f1113c29450",
+   "root": {
+    "children": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f8a910",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 326,
+                     "y": 254
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f8a570",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 326,
+                   "y": 254
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f8b7d0",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 326,
+                     "y": 254
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f8b3c0",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 326,
+                   "y": 254
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f8c2b0",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 326,
+                     "y": 254
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f8be50",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 326,
+                   "y": 254
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f8cd90",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 326,
+                     "y": 254
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f8c980",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 326,
+                   "y": 254
+                  },
+                  "visible": false
+                 }
+                ],
+                "class": "QQuickItem",
+                "enabled": true,
+                "id": "q5f1113f8a1e0",
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 326,
+                 "y": 254
+                },
+                "visible": false
+               },
+               {
+                "children": [
+                 {
+                  "class": "QQuickText_QML_8",
+                  "enabled": true,
+                  "id": "q5f1113f939f0",
+                  "scene": {
+                   "h": 27,
+                   "w": 0,
+                   "x": 326,
+                   "y": 255
+                  },
+                  "visible": false
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f960b0",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 326,
+                     "y": 261
+                    },
+                    "visible": false
+                   }
+                  ],
+                  "class": "QQuickImage_QML_9",
+                  "enabled": true,
+                  "id": "q5f1113f94400",
+                  "props": {
+                   "source": "qrc:/link-external"
+                  },
+                  "scene": {
+                   "h": 16,
+                   "w": 0,
+                   "x": 326,
+                   "y": 261
+                  },
+                  "visible": false
+                 },
+                 {
+                  "class": "QQuickMouseArea",
+                  "enabled": true,
+                  "id": "q5f1113f966d0",
+                  "scene": {
+                   "h": 27,
+                   "w": 0,
+                   "x": 326,
+                   "y": 255
+                  },
+                  "visible": false
+                 }
+                ],
+                "class": "KLLabel_QMLTYPE_7_QML_12",
+                "enabled": true,
+                "id": "q5f1113f919d0",
+                "scene": {
+                 "h": 27,
+                 "w": 0,
+                 "x": 326,
+                 "y": 255
+                },
+                "visible": false
+               }
+              ],
+              "class": "QQuickRowLayout_QML_11",
+              "enabled": true,
+              "id": "q5f1113f89ed0",
+              "scene": {
+               "h": 28,
+               "w": 0,
+               "x": 326,
+               "y": 254
+              },
+              "visible": false
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1113f975e0",
+              "scene": {
+               "h": 32,
+               "w": 100,
+               "x": 276,
+               "y": 252
+              },
+              "visible": false
+             }
+            ],
+            "class": "KLButton_QMLTYPE_10",
+            "enabled": true,
+            "id": "q5f1113f873a0",
+            "scene": {
+             "h": 32,
+             "w": 100,
+             "x": 276,
+             "y": 252
+            },
+            "visible": false
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f740c0",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 423,
+                     "y": 254
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f73d50",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 423,
+                   "y": 254
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f74b50",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 423,
+                     "y": 254
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f74740",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 423,
+                   "y": 254
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f75660",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 423,
+                     "y": 254
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f75200",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 423,
+                   "y": 254
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f761a0",
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 423,
+                     "y": 254
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f1113f75d90",
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 423,
+                   "y": 254
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickItem",
+                "enabled": true,
+                "id": "q5f1113f99710",
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 423,
+                 "y": 254
+                },
+                "visible": true
+               },
+               {
+                "children": [
+                 {
+                  "class": "QQuickText_QML_8",
+                  "enabled": true,
+                  "id": "q5f1113f78980",
+                  "props": {
+                   "text": "OK"
+                  },
+                  "scene": {
+                   "h": 27,
+                   "w": 21,
+                   "x": 423,
+                   "y": 255
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f79bf0",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 444,
+                     "y": 261
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage_QML_9",
+                  "enabled": true,
+                  "id": "q5f1113f792e0",
+                  "props": {
+                   "source": "qrc:/link-external"
+                  },
+                  "scene": {
+                   "h": 16,
+                   "w": 0,
+                   "x": 444,
+                   "y": 261
+                  },
+                  "visible": true
+                 },
+                 {
+                  "class": "QQuickMouseArea",
+                  "enabled": true,
+                  "id": "q5f1113f7a210",
+                  "scene": {
+                   "h": 27,
+                   "w": 21,
+                   "x": 423,
+                   "y": 255
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "KLLabel_QMLTYPE_7_QML_12",
+                "enabled": true,
+                "id": "q5f1113f76d80",
+                "scene": {
+                 "h": 27,
+                 "w": 21,
+                 "x": 423,
+                 "y": 255
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickRowLayout_QML_11",
+              "enabled": true,
+              "id": "q5f1113f73560",
+              "scene": {
+               "h": 28,
+               "w": 21,
+               "x": 423,
+               "y": 254
+              },
+              "visible": true
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1113f7b240",
+              "scene": {
+               "h": 32,
+               "w": 100,
+               "x": 384,
+               "y": 252
+              },
+              "visible": true
+             }
+            ],
+            "class": "KLButton_QMLTYPE_10",
+            "enabled": true,
+            "id": "q5f1113f71f10",
+            "props": {
+             "text": "OK"
+            },
+            "scene": {
+             "h": 32,
+             "w": 100,
+             "x": 384,
+             "y": 252
+            },
+            "visible": true
+           }
+          ],
+          "class": "QQuickRowLayout",
+          "enabled": true,
+          "id": "q5f1113f5f490",
+          "scene": {
+           "h": 32,
+           "w": 476,
+           "x": 16,
+           "y": 252
+          },
+          "visible": true
+         }
+        ],
+        "class": "QQuickRectangle_QML_14",
+        "enabled": true,
+        "id": "q5f1113f67f90",
+        "scene": {
+         "h": 48,
+         "w": 500,
+         "x": 0,
+         "y": 252
+        },
+        "visible": true
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "class": "QQuickText_QML_8",
+              "enabled": true,
+              "id": "q5f1113f80a50",
+              "props": {
+               "text": "Request access to the device"
+              },
+              "scene": {
+               "h": 27,
+               "w": 468,
+               "x": 16,
+               "y": 16
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1113f81e60",
+                "props": {
+                 "source": "qrc:/link-external"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 484,
+                 "y": 22
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage_QML_9",
+              "enabled": true,
+              "id": "q5f1113f813b0",
+              "props": {
+               "source": "qrc:/link-external"
+              },
+              "scene": {
+               "h": 16,
+               "w": 0,
+               "x": 484,
+               "y": 22
+              },
+              "visible": true
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1113f82480",
+              "scene": {
+               "h": 27,
+               "w": 468,
+               "x": 16,
+               "y": 16
+              },
+              "visible": true
+             }
+            ],
+            "class": "KLLabel_QMLTYPE_7",
+            "enabled": true,
+            "id": "q5f1113f7eb60",
+            "scene": {
+             "h": 27,
+             "w": 468,
+             "x": 16,
+             "y": 16
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "acc": {
+                 "actions": [
+                  "SetFocus"
+                 ],
+                 "name": "",
+                 "rect": {
+                  "h": 185,
+                  "w": 468,
+                  "x": 16,
+                  "y": 51
+                 },
+                 "role": 42,
+                 "states": [
+                  "invisible",
+                  "focusable",
+                  "read_only"
+                 ]
+                },
+                "children": [
+                 {
+                  "class": "QQuickPlaceholderText",
+                  "enabled": true,
+                  "id": "q5f1113fc94a0",
+                  "scene": {
+                   "h": 185,
+                   "w": 452,
+                   "x": 16,
+                   "y": 51
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickTextArea_QML_16",
+                "enabled": true,
+                "id": "q5f1113f28e80",
+                "props": {
+                 "text": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'RobotoRegular'; font-size:14px; font-weight:400; font-style:normal;\">\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"
+                },
+                "scene": {
+                 "h": 185,
+                 "w": 468,
+                 "x": 16,
+                 "y": 51
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickItem",
+              "enabled": true,
+              "id": "q5f1113f6fcc0",
+              "scene": {
+               "h": 22,
+               "w": 16,
+               "x": 16,
+               "y": 51
+              },
+              "visible": true
+             },
+             {
+              "acc": {
+               "actions": [
+                "Increase",
+                "Decrease",
+                "SetFocus"
+               ],
+               "name": "",
+               "rect": {
+                "h": 185,
+                "w": 12,
+                "x": 472,
+                "y": 51
+               },
+               "role": 3,
+               "states": [
+                "invisible",
+                "focusable"
+               ]
+              },
+              "children": [
+               {
+                "children": [
+                 {
+                  "class": "QQuickRectangle",
+                  "enabled": true,
+                  "id": "q5f1113f252c0",
+                  "scene": {
+                   "h": 185,
+                   "w": 1,
+                   "x": 482,
+                   "y": 51
+                  },
+                  "visible": false
+                 },
+                 {
+                  "class": "QQuickRectangle",
+                  "enabled": true,
+                  "id": "q5f1113f25b50",
+                  "scene": {
+                   "h": 1,
+                   "w": 12,
+                   "x": 472,
+                   "y": 234
+                  },
+                  "visible": false
+                 }
+                ],
+                "class": "QQuickItem",
+                "enabled": true,
+                "id": "q5f1113f25070",
+                "scene": {
+                 "h": 185,
+                 "w": 12,
+                 "x": 472,
+                 "y": 51
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickRectangle",
+                "enabled": true,
+                "id": "q5f1113f26780",
+                "scene": {
+                 "h": 183,
+                 "w": 8,
+                 "x": 474,
+                 "y": 53
+                },
+                "visible": false
+               }
+              ],
+              "class": "KLScrollBar_QMLTYPE_6",
+              "enabled": true,
+              "id": "q5f1113f24be0",
+              "scene": {
+               "h": 185,
+               "w": 12,
+               "x": 472,
+               "y": 51
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickFlickable_QML_15",
+            "enabled": true,
+            "id": "q5f1113f83240",
+            "scene": {
+             "h": 185,
+             "w": 468,
+             "x": 16,
+             "y": 51
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "class": "QQuickText_QML_8",
+              "enabled": true,
+              "id": "q5f1113fce470",
+              "scene": {
+               "h": 24,
+               "w": 0,
+               "x": 16,
+               "y": 16
+              },
+              "visible": false
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1113fcf7e0",
+                "props": {
+                 "source": "qrc:/link-external"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 16,
+                 "y": 20
+                },
+                "visible": false
+               }
+              ],
+              "class": "QQuickImage_QML_9",
+              "enabled": true,
+              "id": "q5f1113fced20",
+              "props": {
+               "source": "qrc:/link-external"
+              },
+              "scene": {
+               "h": 16,
+               "w": 0,
+               "x": 16,
+               "y": 20
+              },
+              "visible": false
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1113fcfe20",
+              "scene": {
+               "h": 24,
+               "w": 0,
+               "x": 16,
+               "y": 16
+              },
+              "visible": false
+             }
+            ],
+            "class": "KLLabel_QMLTYPE_7",
+            "enabled": true,
+            "id": "q5f1113fcc8a0",
+            "scene": {
+             "h": 24,
+             "w": 0,
+             "x": 16,
+             "y": 16
+            },
+            "visible": false
+           }
+          ],
+          "class": "QQuickColumnLayout",
+          "enabled": true,
+          "id": "q5f1113f79790",
+          "scene": {
+           "h": 220,
+           "w": 468,
+           "x": 16,
+           "y": 16
+          },
+          "visible": true
+         }
+        ],
+        "class": "QQuickRectangle",
+        "enabled": true,
+        "id": "q5f1113f7e3e0",
+        "scene": {
+         "h": 252,
+         "w": 500,
+         "x": 0,
+         "y": 0
+        },
+        "visible": true
+       }
+      ],
+      "class": "QQuickItem",
+      "enabled": true,
+      "id": "q5f1113f67990",
+      "scene": {
+       "h": 252,
+       "w": 500,
+       "x": 0,
+       "y": 0
+      },
+      "visible": true
+     },
+     {
+      "class": "QQuickOverlay",
+      "enabled": true,
+      "id": "q5f1113f67770",
+      "scene": {
+       "h": 0,
+       "w": 0,
+       "x": 0,
+       "y": 0
+      },
+      "visible": false
+     },
+     {
+      "class": "QQuickRectangle",
+      "enabled": true,
+      "id": "q5f11141ce710",
+      "scene": {
+       "h": 0,
+       "w": 0,
+       "x": 0,
+       "y": 0
+      },
+      "visible": true
+     }
+    ],
+    "class": "QQuickRootItem",
+    "enabled": true,
+    "id": "q5f1113bd4b20",
+    "scene": {
+     "h": 0,
+     "w": 0,
+     "x": 0,
+     "y": 0
+    },
+    "visible": true
+   },
+   "title": "Kaspersky Endpoint Security 12.5 for Linux",
+   "visible": false
+  },
+  {
+   "class": "KLPopup_QMLTYPE_19",
+   "geometry": {
+    "h": 215,
+    "w": 400,
+    "x": 781,
+    "y": 521
+   },
+   "id": "q5f1113fcf2c0",
+   "root": {
+    "children": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "class": "QQuickImage_QML_21",
+              "enabled": true,
+              "id": "q5f1113fe1410",
+              "props": {
+               "source": "qrc:/kes-icon-popup"
+              },
+              "scene": {
+               "h": 52,
+               "w": 46,
+               "x": 16,
+               "y": 16
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickItem",
+            "enabled": true,
+            "id": "q5f1113fe10f0",
+            "scene": {
+             "h": 68,
+             "w": 74,
+             "x": 0,
+             "y": 0
+            },
+            "visible": true
+           },
+           {
+            "class": "QQuickItem",
+            "enabled": true,
+            "id": "q5f1113fe25f0",
+            "scene": {
+             "h": 32,
+             "w": 1,
+             "x": 0,
+             "y": 68
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "class": "QQuickText_QML_8",
+              "enabled": true,
+              "id": "q5f1113fe45c0",
+              "scene": {
+               "h": 24,
+               "w": 74,
+               "x": 0,
+               "y": 100
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1113fe5ab0",
+                "props": {
+                 "source": "qrc:/link-external"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 74,
+                 "y": 104
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage_QML_9",
+              "enabled": true,
+              "id": "q5f1113fe4f90",
+              "props": {
+               "source": "qrc:/link-external"
+              },
+              "scene": {
+               "h": 16,
+               "w": 0,
+               "x": 74,
+               "y": 104
+              },
+              "visible": true
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1113fe60f0",
+              "scene": {
+               "h": 24,
+               "w": 74,
+               "x": 0,
+               "y": 100
+              },
+              "visible": true
+             }
+            ],
+            "class": "KLLabel_QMLTYPE_7",
+            "enabled": true,
+            "id": "q5f1113fe29f0",
+            "scene": {
+             "h": 24,
+             "w": 74,
+             "x": 0,
+             "y": 100
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113fea950",
+                      "props": {
+                       "source": "qrc:/icon-arrow-left-normal"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 22,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113fea5b0",
+                    "props": {
+                     "source": "qrc:/icon-arrow-left-normal"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 22,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113feb4a0",
+                      "props": {
+                       "source": "qrc:/icon-arrow-left-hover"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 22,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113feb090",
+                    "props": {
+                     "source": "qrc:/icon-arrow-left-hover"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 22,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113febff0",
+                      "props": {
+                       "source": "qrc:/icon-arrow-left-pressed"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 22,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113febbb0",
+                    "props": {
+                     "source": "qrc:/icon-arrow-left-pressed"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 22,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113fecb40",
+                      "props": {
+                       "source": "qrc:/icon-arrow-left-disabled"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 22,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113fec750",
+                    "props": {
+                     "source": "qrc:/icon-arrow-left-disabled"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 22,
+                     "y": 129
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickItem",
+                  "enabled": false,
+                  "id": "q5f1113fea240",
+                  "scene": {
+                   "h": 0,
+                   "w": 5,
+                   "x": 22,
+                   "y": 132
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": false,
+                    "id": "q5f1113fef850",
+                    "scene": {
+                     "h": 27,
+                     "w": 0,
+                     "x": 27,
+                     "y": 119
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ff0db0",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 27,
+                       "y": 125
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": false,
+                    "id": "q5f1113ff0290",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": 27,
+                     "y": 125
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": false,
+                    "id": "q5f1113ff13f0",
+                    "scene": {
+                     "h": 27,
+                     "w": 0,
+                     "x": 27,
+                     "y": 119
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7_QML_12",
+                  "enabled": false,
+                  "id": "q5f1113fed830",
+                  "scene": {
+                   "h": 27,
+                   "w": 0,
+                   "x": 27,
+                   "y": 119
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickRowLayout_QML_11",
+                "enabled": false,
+                "id": "q5f1113fe9c50",
+                "scene": {
+                 "h": 28,
+                 "w": 5,
+                 "x": 22,
+                 "y": 118
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickMouseArea",
+                "enabled": false,
+                "id": "q5f1113ff2640",
+                "scene": {
+                 "h": 16,
+                 "w": 16,
+                 "x": 17,
+                 "y": 124
+                },
+                "visible": true
+               }
+              ],
+              "class": "KLButton_QMLTYPE_10",
+              "enabled": false,
+              "id": "q5f1113fe7340",
+              "scene": {
+               "h": 16,
+               "w": 16,
+               "x": 17,
+               "y": 124
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "children": [
+                 {
+                  "children": [
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ff6fd0",
+                      "props": {
+                       "source": "qrc:/icon-arrow-right-normal"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 46,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113ff6c30",
+                    "props": {
+                     "source": "qrc:/icon-arrow-right-normal"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 46,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ff7b20",
+                      "props": {
+                       "source": "qrc:/icon-arrow-right-hover"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 46,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113ff7710",
+                    "props": {
+                     "source": "qrc:/icon-arrow-right-hover"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 46,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ff8670",
+                      "props": {
+                       "source": "qrc:/icon-arrow-right-pressed"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 46,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113ff8230",
+                    "props": {
+                     "source": "qrc:/icon-arrow-right-pressed"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 46,
+                     "y": 129
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ff91c0",
+                      "props": {
+                       "source": "qrc:/icon-arrow-right-disabled"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 46,
+                       "y": 129
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage",
+                    "enabled": false,
+                    "id": "q5f1113ff8dd0",
+                    "props": {
+                     "source": "qrc:/icon-arrow-right-disabled"
+                    },
+                    "scene": {
+                     "h": 6,
+                     "w": 5,
+                     "x": 46,
+                     "y": 129
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickItem",
+                  "enabled": false,
+                  "id": "q5f1113ff68c0",
+                  "scene": {
+                   "h": 0,
+                   "w": 5,
+                   "x": 46,
+                   "y": 132
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickText_QML_8",
+                    "enabled": false,
+                    "id": "q5f1113ffbed0",
+                    "scene": {
+                     "h": 27,
+                     "w": 0,
+                     "x": 51,
+                     "y": 119
+                    },
+                    "visible": true
+                   },
+                   {
+                    "children": [
+                     {
+                      "class": "QQuickImage",
+                      "enabled": false,
+                      "id": "q5f1113ffd490",
+                      "props": {
+                       "source": "qrc:/link-external"
+                      },
+                      "scene": {
+                       "h": 0,
+                       "w": 0,
+                       "x": 51,
+                       "y": 125
+                      },
+                      "visible": true
+                     }
+                    ],
+                    "class": "QQuickImage_QML_9",
+                    "enabled": false,
+                    "id": "q5f1113ffc910",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 16,
+                     "w": 0,
+                     "x": 51,
+                     "y": 125
+                    },
+                    "visible": true
+                   },
+                   {
+                    "class": "QQuickMouseArea",
+                    "enabled": false,
+                    "id": "q5f1113ffdad0",
+                    "scene": {
+                     "h": 27,
+                     "w": 0,
+                     "x": 51,
+                     "y": 119
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "KLLabel_QMLTYPE_7_QML_12",
+                  "enabled": false,
+                  "id": "q5f1113ff9eb0",
+                  "scene": {
+                   "h": 27,
+                   "w": 0,
+                   "x": 51,
+                   "y": 119
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickRowLayout_QML_11",
+                "enabled": false,
+                "id": "q5f1113ff62d0",
+                "scene": {
+                 "h": 28,
+                 "w": 5,
+                 "x": 46,
+                 "y": 118
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickMouseArea",
+                "enabled": false,
+                "id": "q5f1113ffed20",
+                "scene": {
+                 "h": 16,
+                 "w": 16,
+                 "x": 41,
+                 "y": 124
+                },
+                "visible": true
+               }
+              ],
+              "class": "KLButton_QMLTYPE_10",
+              "enabled": false,
+              "id": "q5f1113ff3850",
+              "scene": {
+               "h": 16,
+               "w": 16,
+               "x": 41,
+               "y": 124
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickRow",
+            "enabled": true,
+            "id": "q5f1113fe6ca0",
+            "scene": {
+             "h": 32,
+             "w": 40,
+             "x": 17,
+             "y": 124
+            },
+            "visible": true
+           }
+          ],
+          "class": "QQuickColumn",
+          "enabled": true,
+          "id": "q5f1113fe0d80",
+          "scene": {
+           "h": 156,
+           "w": 74,
+           "x": 0,
+           "y": 0
+          },
+          "visible": true
+         },
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "class": "QQuickText_QML_8",
+                "enabled": true,
+                "id": "q5f1114002e90",
+                "scene": {
+                 "h": 26,
+                 "w": 278,
+                 "x": 74,
+                 "y": 14
+                },
+                "visible": true
+               },
+               {
+                "children": [
+                 {
+                  "class": "QQuickImage",
+                  "enabled": true,
+                  "id": "q5f11140044b0",
+                  "props": {
+                   "source": "qrc:/link-external"
+                  },
+                  "scene": {
+                   "h": 0,
+                   "w": 0,
+                   "x": 352,
+                   "y": 19
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "QQuickImage_QML_9",
+                "enabled": true,
+                "id": "q5f11140038d0",
+                "props": {
+                 "source": "qrc:/link-external"
+                },
+                "scene": {
+                 "h": 16,
+                 "w": 0,
+                 "x": 352,
+                 "y": 19
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickMouseArea",
+                "enabled": true,
+                "id": "q5f1114004af0",
+                "scene": {
+                 "h": 26,
+                 "w": 278,
+                 "x": 74,
+                 "y": 14
+                },
+                "visible": true
+               }
+              ],
+              "class": "KLLabel_QMLTYPE_7",
+              "enabled": true,
+              "id": "q5f1114000fc0",
+              "scene": {
+               "h": 26,
+               "w": 278,
+               "x": 74,
+               "y": 14
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickColumn_QML_23",
+            "enabled": true,
+            "id": "q5f11140009e0",
+            "scene": {
+             "h": 56,
+             "w": 278,
+             "x": 74,
+             "y": 0
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "class": "QQuickRepeater_QML_25",
+                "enabled": true,
+                "id": "q5f1114006080",
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 74,
+                 "y": 56
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickColumn",
+              "enabled": true,
+              "id": "q5f1114005ca0",
+              "scene": {
+               "h": 96,
+               "w": 310,
+               "x": 74,
+               "y": 56
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickRepeater_QML_27",
+                "enabled": true,
+                "id": "q5f1114006f90",
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": 74,
+                 "y": 190
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickColumn",
+              "enabled": true,
+              "id": "q5f1114006be0",
+              "scene": {
+               "h": 48,
+               "w": 310,
+               "x": 74,
+               "y": 190
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickColumn_QML_24",
+            "enabled": true,
+            "id": "q5f1114005840",
+            "scene": {
+             "h": 145,
+             "w": 310,
+             "x": 74,
+             "y": 56
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "acc": {
+               "actions": [
+                "Press",
+                "SetFocus"
+               ],
+               "name": "",
+               "rect": {
+                "h": 14,
+                "w": 0,
+                "x": 855,
+                "y": 521
+               },
+               "role": 43,
+               "states": [
+                "invisible",
+                "focusable"
+               ]
+              },
+              "children": [
+               {
+                "class": "QQuickMouseArea",
+                "enabled": true,
+                "id": "q5f111400b320",
+                "scene": {
+                 "h": 24,
+                 "w": 0,
+                 "x": 74,
+                 "y": 0
+                },
+                "visible": true
+               },
+               {
+                "class": "QQuickItem",
+                "enabled": true,
+                "id": "q5f1113f31f80",
+                "scene": {
+                 "h": 24,
+                 "w": 0,
+                 "x": 74,
+                 "y": 0
+                },
+                "visible": true
+               },
+               {
+                "children": [
+                 {
+                  "class": "QQuickText_QML_8",
+                  "enabled": true,
+                  "id": "q5f1113f322b0",
+                  "scene": {
+                   "h": 24,
+                   "w": 0,
+                   "x": 74,
+                   "y": 0
+                  },
+                  "visible": true
+                 },
+                 {
+                  "children": [
+                   {
+                    "class": "QQuickImage",
+                    "enabled": true,
+                    "id": "q5f1113f39a00",
+                    "props": {
+                     "source": "qrc:/link-external"
+                    },
+                    "scene": {
+                     "h": 0,
+                     "w": 0,
+                     "x": 74,
+                     "y": 4
+                    },
+                    "visible": true
+                   }
+                  ],
+                  "class": "QQuickImage_QML_9",
+                  "enabled": true,
+                  "id": "q5f1113f32a10",
+                  "props": {
+                   "source": "qrc:/link-external"
+                  },
+                  "scene": {
+                   "h": 16,
+                   "w": 0,
+                   "x": 74,
+                   "y": 4
+                  },
+                  "visible": true
+                 },
+                 {
+                  "class": "QQuickMouseArea",
+                  "enabled": true,
+                  "id": "q5f1113f39f00",
+                  "scene": {
+                   "h": 24,
+                   "w": 0,
+                   "x": 74,
+                   "y": 0
+                  },
+                  "visible": true
+                 }
+                ],
+                "class": "KLLabel_QMLTYPE_7_QML_18",
+                "enabled": true,
+                "id": "q5f1113f2e270",
+                "scene": {
+                 "h": 24,
+                 "w": 0,
+                 "x": 74,
+                 "y": 0
+                },
+                "visible": true
+               }
+              ],
+              "class": "KLButtonAsLink_QMLTYPE_17",
+              "enabled": true,
+              "id": "q5f111400aba0",
+              "props": {
+               "checked": "false"
+              },
+              "scene": {
+               "h": 24,
+               "w": 0,
+               "x": 74,
+               "y": 0
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickColumn",
+            "enabled": true,
+            "id": "q5f1114007b80",
+            "scene": {
+             "h": 14,
+             "w": 0,
+             "x": 74,
+             "y": 0
+            },
+            "visible": true
+           }
+          ],
+          "class": "QQuickColumn_QML_22",
+          "enabled": true,
+          "id": "q5f1114000610",
+          "scene": {
+           "h": 0,
+           "w": 310,
+           "x": 74,
+           "y": 0
+          },
+          "visible": true
+         }
+        ],
+        "class": "QQuickRowLayout",
+        "enabled": true,
+        "id": "q5f1113fcf710",
+        "scene": {
+         "h": 0,
+         "w": 0,
+         "x": 0,
+         "y": 0
+        },
+        "visible": true
+       },
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1114010540",
+                "props": {
+                 "source": "qrc:/icon-close-black-normal"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": -49,
+                 "y": 1
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage",
+              "enabled": true,
+              "id": "q5f11140101a0",
+              "props": {
+               "source": "qrc:/icon-close-black-normal"
+              },
+              "scene": {
+               "h": 32,
+               "w": 48,
+               "x": -49,
+               "y": 1
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1114011090",
+                "props": {
+                 "source": "qrc:/icon-close-hover"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": -49,
+                 "y": 1
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage",
+              "enabled": true,
+              "id": "q5f1114010c80",
+              "props": {
+               "source": "qrc:/icon-close-hover"
+              },
+              "scene": {
+               "h": 32,
+               "w": 48,
+               "x": -49,
+               "y": 1
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1114011be0",
+                "props": {
+                 "source": "qrc:/icon-close-pressed"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": -49,
+                 "y": 1
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage",
+              "enabled": true,
+              "id": "q5f11140117a0",
+              "props": {
+               "source": "qrc:/icon-close-pressed"
+              },
+              "scene": {
+               "h": 32,
+               "w": 48,
+               "x": -49,
+               "y": 1
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1114012730",
+                "props": {
+                 "source": "qrc:/icon-close-black-normal"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": -49,
+                 "y": 1
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage",
+              "enabled": true,
+              "id": "q5f1114012340",
+              "props": {
+               "source": "qrc:/icon-close-black-normal"
+              },
+              "scene": {
+               "h": 32,
+               "w": 48,
+               "x": -49,
+               "y": 1
+              },
+              "visible": true
+             }
+            ],
+            "class": "QQuickItem",
+            "enabled": true,
+            "id": "q5f111400fe30",
+            "scene": {
+             "h": 0,
+             "w": 48,
+             "x": -49,
+             "y": 17
+            },
+            "visible": true
+           },
+           {
+            "children": [
+             {
+              "class": "QQuickText_QML_8",
+              "enabled": true,
+              "id": "q5f1114015440",
+              "scene": {
+               "h": 27,
+               "w": 0,
+               "x": -1,
+               "y": 4
+              },
+              "visible": true
+             },
+             {
+              "children": [
+               {
+                "class": "QQuickImage",
+                "enabled": true,
+                "id": "q5f1114016920",
+                "props": {
+                 "source": "qrc:/link-external"
+                },
+                "scene": {
+                 "h": 0,
+                 "w": 0,
+                 "x": -1,
+                 "y": 10
+                },
+                "visible": true
+               }
+              ],
+              "class": "QQuickImage_QML_9",
+              "enabled": true,
+              "id": "q5f1114015da0",
+              "props": {
+               "source": "qrc:/link-external"
+              },
+              "scene": {
+               "h": 16,
+               "w": 0,
+               "x": -1,
+               "y": 10
+              },
+              "visible": true
+             },
+             {
+              "class": "QQuickMouseArea",
+              "enabled": true,
+              "id": "q5f1114016f60",
+              "scene": {
+               "h": 27,
+               "w": 0,
+               "x": -1,
+               "y": 4
+              },
+              "visible": true
+             }
+            ],
+            "class": "KLLabel_QMLTYPE_7_QML_12",
+            "enabled": true,
+            "id": "q5f1114013420",
+            "scene": {
+             "h": 27,
+             "w": 0,
+             "x": -1,
+             "y": 4
+            },
+            "visible": true
+           }
+          ],
+          "class": "QQuickRowLayout_QML_11",
+          "enabled": true,
+          "id": "q5f111400f840",
+          "scene": {
+           "h": 28,
+           "w": 48,
+           "x": -49,
+           "y": 3
+          },
+          "visible": true
+         },
+         {
+          "class": "QQuickMouseArea",
+          "enabled": true,
+          "id": "q5f11140181b0",
+          "scene": {
+           "h": 32,
+           "w": 48,
+           "x": -49,
+           "y": 1
+          },
+          "visible": true
+         }
+        ],
+        "class": "KLButton_QMLTYPE_10",
+        "enabled": true,
+        "id": "q5f111400ce10",
+        "scene": {
+         "h": 32,
+         "w": 48,
+         "x": -49,
+         "y": 1
+        },
+        "visible": true
+       }
+      ],
+      "class": "QQuickRectangle_QML_20",
+      "enabled": true,
+      "id": "q5f1113fdf180",
+      "scene": {
+       "h": 0,
+       "w": 0,
+       "x": 0,
+       "y": 0
+      },
+      "visible": true
+     }
+    ],
+    "class": "QQuickRootItem",
+    "enabled": true,
+    "id": "q5f1113fdcde0",
+    "scene": {
+     "h": 0,
+     "w": 0,
+     "x": 0,
+     "y": 0
+    },
+    "visible": true
+   },
+   "title": "",
+   "visible": false
+  }
+ ]
+}

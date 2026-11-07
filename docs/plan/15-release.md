@@ -1,6 +1,6 @@
 # Пачка 15 — Сборка, CI, релиз, документация
 
-Зависит от: 08, 12, 14 | Стенд: GitHub Actions
+Зависит от: 08, 10 (`docs/linux-matrix.md`), 12, 14, 16 (набор совместимости) | Стенд: GitHub Actions
 
 ## Цель
 Любой человек скачивает один маленький файл, запускает `hangui doctor` и
@@ -8,9 +8,9 @@
 (D19).
 
 ## Прочитать
-- [README.md](README.md) — D18–D20; [contracts.md](contracts.md) §5, §7, §11.6.
+- [README.md](README.md) — D18–D20; [contracts.md](contracts.md) §5, §7, §11.5, §11.6.
 - [architecture.md](architecture.md) — «Поставка».
-- `docs/linux-matrix.md` (из 10).
+- `docs/linux-matrix.md` (из 10), `conformance/README.md` (из 16).
 
 ## Задачи
 1. CI: fmt, clippy, test на ubuntu/windows/macos; Linux-сборка без
@@ -21,8 +21,8 @@
    архивы для людей, одиночные `hangui-<версия>-<os>-<arch>.gz` для SDK,
    `SHA256SUMS`, и `checksums.json` (sha256 распакованных бинарей) —
    его вшивают в пакеты SDK при их сборке в своих репозиториях (§11.6,
-   D20). Если пачка 16 уже сделана — и `hangui-conformance-<версия>.tar.gz`
-   (§11.5); иначе это добавляет 16.
+   D20), и `hangui-conformance-<версия>.tar.gz` из `conformance/` (§11.5).
+   Проверка из п. 12 пачки 16 — в CI.
 3. Проверка «без зависимостей» в CI на каждый бинарь: `ldd` — только glibc,
    `dumpbin /dependents` — только DLL Windows, `otool -L` — только
    системные; запуск `hangui version` и `hangui --fixture … tree` в чистых
